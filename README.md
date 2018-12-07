@@ -5,11 +5,8 @@ More importantly, it opens up the potential for a "joint venture" between the cu
 
 
 
-Inline-style: 
+
 ![alt text](http://manna-network.com/images3.jpeg "Logo Title Text 1")
 
 
 
-![alt text][logo]
-
-[logo]: http://manna-network.com/images3.jpeg "Logo Title Text 2"
