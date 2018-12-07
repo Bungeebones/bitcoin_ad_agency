@@ -1,17 +1,17 @@
 <?php
-$agent_url = "agent-to-agent.com";
+$agent_url = "insert your site's domain name here";
 $agent_folder = "manna-network";
 //IMPORTANT - YOU NEED TO CONTACT MANNA NETWORK ADMINISTRATION TO GET A VALID AGENT ID. IMPROPER CONFIGURATION CAN RESULT IN LOSS OF YOUR AND YOUR DOWNLINE'S COMMISSIONS AND ENLISTMENT CREDITS! 
 
-define("AGENT_ID", 6);
+define("AGENT_ID", "insert your agent ID number here");
 define("AGENT_FOLDERNAME", "manna-network");
-define("AGENT_URL", "agent-to-agent.com");
+define("AGENT_URL", "insert your site's domain name here");
 //root user with full grant capabilities - used for setup only - removing password after installation is fine
 $servername = "localhost";
 $username = "root";
-$password = "M1y1s1q1l1***###";
+$password = "your_db_users_pw";
 
-$exchange_pw = "j3h5&3ja;x.(+2kjshfh2FFGscav//cnputydsvs6498ndmcxvljgehsnsmi";
+$exchange_pw = "insert your exchange_pw here";
 
 //the original file at download should be like following
 /*
