@@ -1,0 +1,169 @@
+[12-Oct-2015 22:56:16 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_buyer.php on line 130
+[12-Oct-2015 22:56:31 UTC] PHP Warning:  include(/home/bungeebo/public_html/new_site/960bottom.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/bungeebo/public_html/members/adcredit_exchange/rud_buyer.php on line 189
+[12-Oct-2015 22:56:31 UTC] PHP Warning:  include(/home/bungeebo/public_html/new_site/960bottom.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/bungeebo/public_html/members/adcredit_exchange/rud_buyer.php on line 189
+[12-Oct-2015 22:56:31 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/home/bungeebo/public_html/new_site/960bottom.php' for inclusion (include_path='.:/opt/alt/php53/usr/share/pear:/opt/alt/php53/usr/share/php') in /home/bungeebo/public_html/members/adcredit_exchange/rud_buyer.php on line 189
+[12-Oct-2015 22:56:44 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index.php on line 83
+[12-Oct-2015 22:57:52 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index.php on line 83
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined index: num_credits_4sale in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 47
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined index: price_credits_4sale in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 48
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined index: market_ordertoserver in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 49
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined index: currency in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 50
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined index: time_period_buyer in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 51
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined index: time_period_seller in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 52
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined index: bank_name in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 53
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined index: bank_acct_num in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 54
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined index: bank_acct_name in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 55
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined index: user_ip in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 56
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined index: textarea in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 57
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined variable: num_credits_4saleErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 456
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined variable: price_credits_4saleErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 476
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Use of undefined constant market_ordertoserver - assumed 'market_ordertoserver' in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 487
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined variable: currencyErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 495
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined variable: bank_nameErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 499
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined variable: bank_acct_numErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 505
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined variable: time_period_buyerErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 538
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined variable: msgtripper in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 577
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined variable: time_period_sellerErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 595
+[12-Oct-2015 22:58:04 UTC] PHP Notice:  Undefined variable: msgtripper in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 645
+[02-Dec-2015 23:12:06 UTC] PHP Notice:  Undefined variable: row in /home/bungeebo/public_html/members/adcredit_exchange/termsofservice.php on line 38
+[02-Dec-2015 23:12:06 UTC] PHP Notice:  Undefined index: action in /home/bungeebo/public_html/members/adcredit_exchange/termsofservice.php on line 40
+[10-Dec-2015 20:04:10 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118
+[10-Dec-2015 20:08:02 UTC] PHP Notice:  Undefined variable: row in /home/bungeebo/public_html/members/adcredit_exchange/termsofservice.php on line 38
+[10-Dec-2015 20:08:02 UTC] PHP Notice:  Undefined index: action in /home/bungeebo/public_html/members/adcredit_exchange/termsofservice.php on line 40
+[16-Jan-2016 16:43:20 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118
+[16-Jan-2016 16:45:44 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118
+[16-Jan-2016 16:47:24 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118
+[16-Jan-2016 16:50:07 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118
+[16-Jan-2016 16:51:37 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118
+[16-Jan-2016 16:51:54 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118
+[16-Jan-2016 16:52:57 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118
+[16-Jan-2016 16:54:36 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118
+[16-Jan-2016 17:45:36 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_gourl.php on line 118
+[16-Jan-2016 18:11:03 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_gourl.php on line 100
+[16-Jan-2016 18:16:30 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_gourl.php on line 100
+[16-Jan-2016 19:37:44 UTC] PHP Parse error:  syntax error, unexpected T_STRING in /home/bungeebo/public_html/members/adcredit_exchange/index_gourl.php on line 115
+[16-Jan-2016 20:55:18 UTC] PHP Parse error:  syntax error, unexpected T_STRING in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 86
+[16-Jan-2016 22:39:41 UTC] PHP Warning:  mcrypt_encrypt() [<a href='function.mcrypt-encrypt'>function.mcrypt-encrypt</a>]: Attempt to use an empty IV, which is NOT recommend in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 45
+[16-Jan-2016 22:39:41 UTC] PHP Warning:  mcrypt_decrypt() [<a href='function.mcrypt-decrypt'>function.mcrypt-decrypt</a>]: Attempt to use an empty IV, which is NOT recommend in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 47
+[16-Jan-2016 22:41:03 UTC] PHP Warning:  mcrypt_encrypt() [<a href='function.mcrypt-encrypt'>function.mcrypt-encrypt</a>]: Attempt to use an empty IV, which is NOT recommend in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 45
+[16-Jan-2016 22:41:03 UTC] PHP Warning:  mcrypt_decrypt() [<a href='function.mcrypt-decrypt'>function.mcrypt-decrypt</a>]: Attempt to use an empty IV, which is NOT recommend in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 47
+[16-Jan-2016 22:43:41 UTC] PHP Warning:  mcrypt_encrypt() [<a href='function.mcrypt-encrypt'>function.mcrypt-encrypt</a>]: Attempt to use an empty IV, which is NOT recommend in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 45
+[16-Jan-2016 22:43:41 UTC] PHP Warning:  mcrypt_decrypt() [<a href='function.mcrypt-decrypt'>function.mcrypt-decrypt</a>]: Attempt to use an empty IV, which is NOT recommend in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 47
+[16-Jan-2016 22:46:40 UTC] PHP Warning:  mcrypt_encrypt() [<a href='function.mcrypt-encrypt'>function.mcrypt-encrypt</a>]: Attempt to use an empty IV, which is NOT recommend in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 45
+[16-Jan-2016 22:46:40 UTC] PHP Warning:  mcrypt_decrypt() [<a href='function.mcrypt-decrypt'>function.mcrypt-decrypt</a>]: Attempt to use an empty IV, which is NOT recommend in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 47
+[16-Jan-2016 22:50:10 UTC] PHP Parse error:  syntax error, unexpected $end in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 215
+[16-Jan-2016 22:50:18 UTC] PHP Parse error:  syntax error, unexpected $end in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 215
+[16-Jan-2016 23:30:40 UTC] PHP Notice:  Undefined variable: cipherpprivtext_base64 in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 95
+[16-Jan-2016 23:30:40 UTC] PHP Notice:  Undefined variable: link_id in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 95
+[16-Jan-2016 23:30:40 UTC] PHP Notice:  Undefined variable: wdgtid in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 95
+[16-Jan-2016 23:30:40 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 105
+[16-Jan-2016 23:30:40 UTC] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, boolean given in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 110
+[16-Jan-2016 23:31:35 UTC] PHP Notice:  Undefined variable: cipherpprivtext_base64 in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 95
+[16-Jan-2016 23:31:35 UTC] PHP Notice:  Undefined variable: link_id in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 95
+[16-Jan-2016 23:31:35 UTC] PHP Notice:  Undefined variable: wdgtid in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 95
+[16-Jan-2016 23:31:35 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 106
+[16-Jan-2016 23:31:35 UTC] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, boolean given in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 111
+[16-Jan-2016 23:33:22 UTC] PHP Notice:  Undefined variable: link_id in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 95
+[16-Jan-2016 23:33:22 UTC] PHP Notice:  Undefined variable: wdgtid in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 95
+[16-Jan-2016 23:33:22 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 106
+[16-Jan-2016 23:33:22 UTC] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, boolean given in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 111
+[16-Jan-2016 23:36:47 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 106
+[16-Jan-2016 23:36:47 UTC] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, boolean given in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 111
+[16-Jan-2016 23:40:44 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 117
+[16-Jan-2016 23:40:44 UTC] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, boolean given in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 122
+[16-Jan-2016 23:41:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 117
+[16-Jan-2016 23:41:31 UTC] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, boolean given in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 122
+[16-Jan-2016 23:41:46 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 117
+[16-Jan-2016 23:41:46 UTC] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, boolean given in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 122
+[16-Jan-2016 23:49:03 UTC] PHP Notice:  Undefined variable: privkeyencrypt in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 119
+[16-Jan-2016 23:49:03 UTC] PHP Notice:  Undefined variable: privkeyencrypt in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 124
+[16-Jan-2016 23:49:03 UTC] PHP Warning:  mcrypt_decrypt() [<a href='function.mcrypt-decrypt'>function.mcrypt-decrypt</a>]: The IV parameter must be as long as the blocksize in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 133
+[16-Jan-2016 23:49:03 UTC] PHP Warning:  mcrypt_decrypt() [<a href='function.mcrypt-decrypt'>function.mcrypt-decrypt</a>]: The IV parameter must be as long as the blocksize in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 135
+[16-Jan-2016 23:52:34 UTC] PHP Notice:  Undefined variable: privkeyencrypt in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 120
+[16-Jan-2016 23:52:34 UTC] PHP Notice:  Undefined variable: privkeyencrypt in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 125
+[16-Jan-2016 23:52:34 UTC] PHP Warning:  mcrypt_decrypt() [<a href='function.mcrypt-decrypt'>function.mcrypt-decrypt</a>]: The IV parameter must be as long as the blocksize in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 134
+[16-Jan-2016 23:52:34 UTC] PHP Warning:  mcrypt_decrypt() [<a href='function.mcrypt-decrypt'>function.mcrypt-decrypt</a>]: The IV parameter must be as long as the blocksize in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 136
+[16-Jan-2016 23:53:21 UTC] PHP Notice:  Undefined variable: privkeyencrypt in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 120
+[16-Jan-2016 23:53:21 UTC] PHP Notice:  Undefined variable: privkeyencrypt in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 125
+[16-Jan-2016 23:53:21 UTC] PHP Warning:  mcrypt_decrypt() [<a href='function.mcrypt-decrypt'>function.mcrypt-decrypt</a>]: The IV parameter must be as long as the blocksize in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 134
+[16-Jan-2016 23:53:21 UTC] PHP Warning:  mcrypt_decrypt() [<a href='function.mcrypt-decrypt'>function.mcrypt-decrypt</a>]: The IV parameter must be as long as the blocksize in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 136
+[16-Jan-2016 23:53:30 UTC] PHP Notice:  Undefined variable: privkeyencrypt in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 120
+[16-Jan-2016 23:53:30 UTC] PHP Notice:  Undefined variable: privkeyencrypt in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 125
+[16-Jan-2016 23:53:30 UTC] PHP Warning:  mcrypt_decrypt() [<a href='function.mcrypt-decrypt'>function.mcrypt-decrypt</a>]: The IV parameter must be as long as the blocksize in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 134
+[16-Jan-2016 23:53:30 UTC] PHP Warning:  mcrypt_decrypt() [<a href='function.mcrypt-decrypt'>function.mcrypt-decrypt</a>]: The IV parameter must be as long as the blocksize in /home/bungeebo/public_html/members/adcredit_exchange/get_gourl.php on line 136
+[15-Jun-2016 20:15:36 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_buyer.php on line 130
+[23-Jun-2016 17:43:52 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_buyer.php on line 130
+[23-Jun-2016 18:38:52 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118
+[23-Jun-2016 18:39:22 UTC] PHP Notice:  Undefined index: num_credits_4sale in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 47
+[23-Jun-2016 18:39:22 UTC] PHP Notice:  Undefined index: price_credits_4sale in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 48
+[23-Jun-2016 18:39:22 UTC] PHP Notice:  Undefined index: market_ordertoserver in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 49
+[23-Jun-2016 18:39:22 UTC] PHP Notice:  Undefined index: currency in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 50
+[23-Jun-2016 18:39:22 UTC] PHP Notice:  Undefined index: time_period_buyer in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 51
+[23-Jun-2016 18:39:22 UTC] PHP Notice:  Undefined index: time_period_seller in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 52
+[23-Jun-2016 18:39:22 UTC] PHP Notice:  Undefined index: bank_name in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 53
+[23-Jun-2016 18:39:22 UTC] PHP Notice:  Undefined index: bank_acct_num in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 54
+[23-Jun-2016 18:39:22 UTC] PHP Notice:  Undefined index: bank_acct_name in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 55
+[23-Jun-2016 18:39:22 UTC] PHP Notice:  Undefined index: user_ip in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 56
+[23-Jun-2016 18:39:22 UTC] PHP Notice:  Undefined index: textarea in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 57
+[23-Jun-2016 18:39:22 UTC] PHP Notice:  Undefined variable: num_credits_4saleErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 456
+[23-Jun-2016 18:39:23 UTC] PHP Notice:  Undefined variable: price_credits_4saleErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 476
+[23-Jun-2016 18:39:23 UTC] PHP Notice:  Use of undefined constant market_ordertoserver - assumed 'market_ordertoserver' in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 487
+[23-Jun-2016 18:39:23 UTC] PHP Notice:  Undefined variable: currencyErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 495
+[23-Jun-2016 18:39:23 UTC] PHP Notice:  Undefined variable: bank_nameErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 499
+[23-Jun-2016 18:39:23 UTC] PHP Notice:  Undefined variable: bank_acct_numErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 505
+[23-Jun-2016 18:39:23 UTC] PHP Notice:  Undefined variable: time_period_buyerErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 538
+[23-Jun-2016 18:39:23 UTC] PHP Notice:  Undefined variable: msgtripper in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 577
+[23-Jun-2016 18:39:23 UTC] PHP Notice:  Undefined variable: time_period_sellerErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 595
+[23-Jun-2016 18:39:23 UTC] PHP Notice:  Undefined variable: msgtripper in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 645
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined index: num_credits_4sale in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 47
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined index: price_credits_4sale in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 48
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined index: market_ordertoserver in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 49
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined index: currency in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 50
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined index: time_period_buyer in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 51
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined index: time_period_seller in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 52
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined index: bank_name in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 53
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined index: bank_acct_num in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 54
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined index: bank_acct_name in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 55
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined index: user_ip in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 56
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined index: textarea in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 57
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined variable: num_credits_4saleErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 456
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined variable: price_credits_4saleErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 476
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Use of undefined constant market_ordertoserver - assumed 'market_ordertoserver' in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 487
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined variable: currencyErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 495
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined variable: bank_nameErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 499
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined variable: bank_acct_numErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 505
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined variable: time_period_buyerErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 538
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined variable: msgtripper in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 577
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined variable: time_period_sellerErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 595
+[23-Jun-2016 18:40:22 UTC] PHP Notice:  Undefined variable: msgtripper in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 645
+[23-Jun-2016 18:45:06 UTC] PHP Warning:  include(/home/bungeebo/public_html/new_site/960bottom.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/bungeebo/public_html/members/adcredit_exchange/rud_buyer.php on line 189
+[23-Jun-2016 18:45:06 UTC] PHP Warning:  include(/home/bungeebo/public_html/new_site/960bottom.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/bungeebo/public_html/members/adcredit_exchange/rud_buyer.php on line 189
+[23-Jun-2016 18:45:06 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/home/bungeebo/public_html/new_site/960bottom.php' for inclusion (include_path='.:/opt/alt/php53/usr/share/pear:/opt/alt/php53/usr/share/php') in /home/bungeebo/public_html/members/adcredit_exchange/rud_buyer.php on line 189
+[23-Jun-2016 18:45:15 UTC] PHP Notice:  Undefined index: status in /home/bungeebo/public_html/members/adcredit_exchange/buyerreport.php on line 242
+[23-Jun-2016 18:45:15 UTC] PHP Notice:  Undefined index: scope in /home/bungeebo/public_html/members/adcredit_exchange/buyerreport.php on line 243
+[23-Jun-2016 18:45:41 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined index: num_credits_4sale in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 47
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined index: price_credits_4sale in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 48
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined index: market_ordertoserver in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 49
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined index: currency in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 50
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined index: time_period_buyer in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 51
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined index: time_period_seller in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 52
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined index: bank_name in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 53
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined index: bank_acct_num in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 54
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined index: bank_acct_name in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 55
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined index: user_ip in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 56
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined index: textarea in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 57
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined variable: num_credits_4saleErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 456
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined variable: price_credits_4saleErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 476
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Use of undefined constant market_ordertoserver - assumed 'market_ordertoserver' in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 487
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined variable: currencyErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 495
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined variable: bank_nameErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 499
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined variable: bank_acct_numErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 505
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined variable: time_period_buyerErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 538
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined variable: msgtripper in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 577
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined variable: time_period_sellerErr in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 595
+[23-Jun-2016 18:46:15 UTC] PHP Notice:  Undefined variable: msgtripper in /home/bungeebo/public_html/members/adcredit_exchange/offer.php on line 645
+[23-Jun-2016 19:02:39 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118
+[23-Jun-2016 19:05:07 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118
+[01-Jul-2016 19:58:04 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118
+[17-Sep-2017 17:21:43 UTC] PHP Notice:  Undefined variable: link_selected in /home/bungeebo/public_html/members/adcredit_exchange/index_seller.php on line 118

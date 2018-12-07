@@ -1,0 +1,171 @@
+[09-Sep-2015 19:27:02 UTC] PHP Parse error:  syntax error, unexpected $end, expecting T_VARIABLE or T_DOLLAR_OPEN_CURLY_BRACES or T_CURLY_OPEN in /home/bungeebo/public_html/cryptoapi/Examples/example_basic.php on line 178
+[09-Sep-2015 19:29:25 UTC] PHP Parse error:  syntax error, unexpected $end, expecting T_VARIABLE or T_DOLLAR_OPEN_CURLY_BRACES or T_CURLY_OPEN in /home/bungeebo/public_html/cryptoapi/Examples/example_basic.php on line 178
+[09-Sep-2015 21:16:55 UTC] PHP Parse error:  syntax error, unexpected $end, expecting T_VARIABLE or T_DOLLAR_OPEN_CURLY_BRACES or T_CURLY_OPEN in /home/bungeebo/public_html/cryptoapi/Examples/example_basic.php on line 178
+[09-Sep-2015 21:22:56 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960top.php on line 77
+[09-Sep-2015 21:24:52 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[09-Sep-2015 21:26:10 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[09-Sep-2015 21:34:00 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[09-Sep-2015 21:36:29 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[09-Sep-2015 21:37:11 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[09-Sep-2015 21:52:35 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[18-Sep-2015 22:42:46 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 00:41:50 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 00:43:29 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 00:45:04 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 18:44:36 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 19:00:36 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 19:02:53 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ')' in /home/bungeebo/public_html/members/Examples/example_basic.php on line 148
+[01-Oct-2015 19:03:15 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 19:03:27 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 19:04:31 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ')' in /home/bungeebo/public_html/members/Examples/example_basic.php on line 148
+[01-Oct-2015 19:07:18 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 19:07:44 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ')' in /home/bungeebo/public_html/members/Examples/example_basic.php on line 148
+[01-Oct-2015 19:09:13 UTC] PHP Parse error:  syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home/bungeebo/public_html/members/Examples/example_basic.php on line 19
+[01-Oct-2015 19:09:18 UTC] PHP Parse error:  syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home/bungeebo/public_html/members/Examples/example_basic.php on line 19
+[01-Oct-2015 19:09:42 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 19:23:42 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/bungeebo/public_html/members/cryptobox.class.php on line 1257
+[01-Oct-2015 19:23:48 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/bungeebo/public_html/members/cryptobox.class.php on line 1257
+[01-Oct-2015 19:24:40 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/bungeebo/public_html/members/cryptobox.class.php on line 1257
+[01-Oct-2015 19:24:42 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/bungeebo/public_html/members/cryptobox.class.php on line 1257
+[01-Oct-2015 19:25:41 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 19:26:43 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/bungeebo/public_html/members/cryptobox.class.php on line 1257
+[01-Oct-2015 19:27:24 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/bungeebo/public_html/members/cryptobox.class.php on line 1257
+[01-Oct-2015 19:27:27 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/bungeebo/public_html/members/cryptobox.class.php on line 1257
+[01-Oct-2015 19:27:57 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 19:28:30 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 19:53:12 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 20:11:22 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 20:13:45 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 20:15:53 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 20:15:53 UTC] PHP Warning:  include(user_cpanel_submenu.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/bungeebo/public_html/members/Examples/example_basic.php on line 164
+[01-Oct-2015 20:15:53 UTC] PHP Warning:  include(user_cpanel_submenu.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/bungeebo/public_html/members/Examples/example_basic.php on line 164
+[01-Oct-2015 20:15:53 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'user_cpanel_submenu.php' for inclusion (include_path='.:/opt/alt/php53/usr/share/pear:/opt/alt/php53/usr/share/php') in /home/bungeebo/public_html/members/Examples/example_basic.php on line 164
+[01-Oct-2015 20:18:19 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 20:18:19 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[01-Oct-2015 20:39:53 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 20:39:53 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[01-Oct-2015 20:52:05 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 20:52:05 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[01-Oct-2015 21:02:48 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[01-Oct-2015 21:02:48 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[02-Oct-2015 01:34:35 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[02-Oct-2015 01:34:35 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[02-Oct-2015 01:37:24 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[02-Oct-2015 01:37:24 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[02-Oct-2015 01:39:32 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[02-Oct-2015 01:39:32 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[02-Oct-2015 01:47:26 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[02-Oct-2015 01:47:26 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[05-Oct-2015 00:08:03 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[05-Oct-2015 00:08:03 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[05-Oct-2015 00:31:51 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[05-Oct-2015 00:31:51 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[05-Oct-2015 00:38:08 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[05-Oct-2015 00:38:08 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[05-Oct-2015 21:24:12 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[05-Oct-2015 21:24:12 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[05-Oct-2015 21:27:57 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[05-Oct-2015 21:27:57 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[05-Oct-2015 21:32:09 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[05-Oct-2015 21:32:09 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[06-Oct-2015 20:15:55 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[06-Oct-2015 20:15:55 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[06-Oct-2015 22:11:46 UTC] PHP Notice:  Undefined variable: moniker in /home/bungeebo/public_html/960btctop.php on line 78
+[06-Oct-2015 22:11:46 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 16:12:13 UTC] PHP Parse error:  syntax error, unexpected '>', expecting T_STRING or T_VARIABLE or '{' or '$' in /home/bungeebo/public_html/classes/deposit_bitcoin_from_gourl_class.php on line 16
+[07-Oct-2015 16:12:40 UTC] PHP Parse error:  syntax error, unexpected '>', expecting T_STRING or T_VARIABLE or '{' or '$' in /home/bungeebo/public_html/classes/deposit_bitcoin_from_gourl_class.php on line 16
+[07-Oct-2015 16:12:52 UTC] PHP Parse error:  syntax error, unexpected '>', expecting T_STRING or T_VARIABLE or '{' or '$' in /home/bungeebo/public_html/classes/deposit_bitcoin_from_gourl_class.php on line 16
+[07-Oct-2015 16:41:33 UTC] PHP Parse error:  syntax error, unexpected '>', expecting T_STRING or T_VARIABLE or '{' or '$' in /home/bungeebo/public_html/classes/deposit_bitcoin_from_gourl_class.php on line 16
+[07-Oct-2015 21:24:16 UTC] PHP Parse error:  syntax error, unexpected '>', expecting T_STRING or T_VARIABLE or '{' or '$' in /home/bungeebo/public_html/classes/deposit_bitcoin_from_gourl_class.php on line 15
+[07-Oct-2015 21:27:04 UTC] PHP Parse error:  syntax error, unexpected '>', expecting T_STRING or T_VARIABLE or '{' or '$' in /home/bungeebo/public_html/classes/deposit_bitcoin_from_gourl_class.php on line 15
+[07-Oct-2015 21:28:05 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 21:30:59 UTC] PHP Parse error:  syntax error, unexpected '>', expecting T_STRING or T_VARIABLE or '{' or '$' in /home/bungeebo/public_html/classes/deposit_bitcoin_from_gourl_class.php on line 15
+[07-Oct-2015 21:34:00 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 21:35:07 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 21:36:03 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 21:39:48 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 21:41:27 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 21:44:46 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 21:49:54 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 21:51:01 UTC] PHP Parse error:  syntax error, unexpected '>', expecting T_STRING or T_VARIABLE or '{' or '$' in /home/bungeebo/public_html/classes/deposit_bitcoin_from_gourl_class.php on line 10
+[07-Oct-2015 21:52:54 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 21:53:57 UTC] PHP Parse error:  syntax error, unexpected T_ECHO, expecting T_FUNCTION in /home/bungeebo/public_html/classes/deposit_bitcoin_from_gourl_class.php on line 4
+[07-Oct-2015 21:54:37 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 21:58:50 UTC] PHP Parse error:  syntax error, unexpected '>', expecting T_STRING or T_VARIABLE or '{' or '$' in /home/bungeebo/public_html/classes/deposit_bitcoin_from_gourl_class.php on line 10
+[07-Oct-2015 21:59:15 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 22:00:36 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 22:01:28 UTC] PHP Parse error:  syntax error, unexpected '>', expecting T_STRING or T_VARIABLE or '{' or '$' in /home/bungeebo/public_html/classes/deposit_bitcoin_from_gourl_class.php on line 9
+[07-Oct-2015 22:02:00 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 22:02:29 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 22:05:41 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 22:07:15 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 22:07:53 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 22:10:22 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 22:29:25 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 22:54:11 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 22:55:10 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 22:56:03 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 22:57:09 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 22:58:48 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 23:00:28 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 23:01:31 UTC] PHP Parse error:  syntax error, unexpected '>', expecting T_STRING or T_VARIABLE or '{' or '$' in /home/bungeebo/public_html/classes/deposit_bitcoin_from_gourl_class.php on line 7
+[07-Oct-2015 23:03:57 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 23:05:13 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 23:09:50 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 23:15:48 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[07-Oct-2015 23:17:03 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[08-Oct-2015 00:41:17 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[08-Oct-2015 01:11:45 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[08-Oct-2015 15:05:27 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[08-Oct-2015 15:05:48 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[08-Oct-2015 15:19:26 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[08-Oct-2015 15:30:11 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[08-Oct-2015 16:27:25 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[08-Oct-2015 16:35:18 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[08-Oct-2015 17:50:25 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[09-Oct-2015 17:49:04 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[09-Oct-2015 22:32:56 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[09-Oct-2015 22:50:43 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 8
+[18-Oct-2015 18:11:36 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[20-Oct-2015 03:12:47 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[16-Nov-2015 20:02:59 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[16-Nov-2015 20:05:36 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[16-Nov-2015 20:06:42 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[15-Dec-2015 22:28:52 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[16-Dec-2015 00:47:41 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[16-Dec-2015 00:52:59 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[16-Dec-2015 01:06:58 UTC] PHP Notice:  Constant DB_HOST already defined in /home/bungeebo/public_html/members/cryptobox.config.php on line 6
+[16-Dec-2015 01:06:58 UTC] PHP Notice:  Constant DB_USER already defined in /home/bungeebo/public_html/members/cryptobox.config.php on line 7
+[16-Dec-2015 01:06:58 UTC] PHP Notice:  Constant DB_NAME already defined in /home/bungeebo/public_html/members/cryptobox.config.php on line 9
+[16-Dec-2015 02:26:47 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[31-Dec-2015 20:20:35 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[05-Jan-2016 22:37:56 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[12-Jan-2016 22:32:16 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[12-Jan-2016 23:57:51 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[16-Jan-2016 16:32:34 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[16-Jan-2016 16:33:17 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[16-Jan-2016 16:33:58 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[11-Apr-2016 23:33:47 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[11-Apr-2016 23:37:16 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[21-Jun-2016 17:41:19 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[21-Jun-2016 17:59:59 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[23-Jun-2016 18:27:28 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[15-Aug-2016 00:03:36 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[29-Nov-2016 01:32:10 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[29-Nov-2016 01:32:28 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[29-Nov-2016 01:32:40 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[29-Nov-2016 01:35:04 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[16-Jan-2017 20:21:25 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[19-Feb-2017 15:15:18 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[10-Mar-2017 19:39:46 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[10-Mar-2017 20:19:44 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[10-Mar-2017 20:40:30 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[18-Mar-2017 19:28:46 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[22-Dec-2017 19:55:23 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[22-Dec-2017 20:14:24 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[23-Dec-2017 00:23:24 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[23-Dec-2017 01:08:34 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[23-Dec-2017 01:22:10 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[23-Dec-2017 01:25:11 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[23-Dec-2017 01:25:32 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7
+[23-Dec-2017 01:29:23 UTC] PHP Notice:  Undefined variable: user_id in /home/bungeebo/public_html/members/user_cpanel_submenu.php on line 7

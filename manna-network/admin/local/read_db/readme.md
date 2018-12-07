@@ -1,0 +1,2 @@
+This folder provides all the output to the downline web directories. For security reasons it has to use the mysql users with only "read only" permissions that you configured aduring installation. It may be overkill to have so many different users but provides more security to configure a different user and different password for every table. 
+dev note - these queries deliver php variables but should retrieve them all as json so that they can deliver data usable by all devices.
