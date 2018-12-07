@@ -3,8 +3,6 @@ An enterprise level platform of the Bitcoin-only ad network designed especially 
 
 More importantly, it opens up the potential for a "joint venture" between the customer and the agent to monetize the web traffic and/or the social network of their customer in a win-win arrangement that fosters a higher level of cooperation between the service provider and the customer resulting in higher customer retention and satisfaction. 
 
-Inline-style: 
-![alt text](http://manna-network.com/images3.jpeg "Logo Title Text 1")
+(http://manna-network.com/images3.jpeg "Logo Title Text 1")
 
-Reference-style: 
-![alt text][logo]
+
