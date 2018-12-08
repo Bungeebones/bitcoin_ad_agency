@@ -89,22 +89,11 @@ $files2 = scandir('manna_daily/'.$folder_name);
 
 	foreach ($files2 as $value2) {
 if($value2 != "index.php" && $value2 != ".." && $value2 != "."){
-	$request_uri = $_SERVER ['REQUEST_URI'];
-echo '<br>request_url = ', $request_uri;
-	$pieces = explode("/",$request_uri);
-echo '<br>pieces array = ';
-print_r($pieces);
-echo '<h1>opening file ', $_SERVER['DOCUMENT_ROOT'].'/'.$pieces[1].'/admin/install/fill_db/manna_daily/'.$folder_name.'/'.$value2;
-echo '</h1>';
-if($pieces[1]=="bitcoin_ad_agency"){
-	$iniinserted = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/'.$pieces[1].'/'.$pieces[2].'/admin/install/fill_db/manna_daily/'.$folder_name.'/'.$value2);
-}
-else
-{
-$iniinserted = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/'.$pieces[1].'/admin/install/fill_db/manna_daily/'.$folder_name.'/'.$value2);
 
-}
-echo $iniinserted;
+echo '<h1>opening file ', $_SERVER['DOCUMENT_ROOT'].'/'.$agent_folder.'/admin/install/fill_db/manna_daily/'.$folder_name.'/'.$value2;
+echo '</h1>';
+
+	$iniinserted = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/'.$agent_folder.'/admin/install/fill_db/manna_daily/'.$folder_name.'/'.$value2);
 
 $tobinserted = explode(";", $iniinserted);
 foreach($tobinserted as$key=>$value3){

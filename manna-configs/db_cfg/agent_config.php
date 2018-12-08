@@ -1,10 +1,15 @@
 <?php
 $agent_url = "insert your site's domain name here";
-$agent_folder = "manna-network";
+//NOTE: the next two settings can be adjusted according to your preference. Just be sure that you match the name changes you make here by renaming either and/or both the bitcoin_ad_agency-master  folder name or the manna-network folder name (you can even move the files and folders in the latter up one level)
+$agent_folder = "bitcoin_ad_agency/manna-network";
+define("AGENT_FOLDERNAME", "bitcoin_ad_agency/manna-network");
+
+
+
 //IMPORTANT - YOU NEED TO CONTACT MANNA NETWORK ADMINISTRATION TO GET A VALID AGENT ID. IMPROPER CONFIGURATION CAN RESULT IN LOSS OF YOUR AND YOUR DOWNLINE'S COMMISSIONS AND ENLISTMENT CREDITS! 
 
 define("AGENT_ID", "insert your agent ID number here");
-define("AGENT_FOLDERNAME", "manna-network");
+
 define("AGENT_URL", "insert your site's domain name here");
 //root user with full grant capabilities - used for setup only - removing password after installation is fine
 $servername = "localhost";
