@@ -29,6 +29,7 @@ require_once( dirname_safe(__DIR__, 4).'manna-configs/db_cfg/auth_constants.php'
 }
 
 require_once( dirname_safe(__DIR__, 4).'manna-configs/db_cfg/'.WRITER_AGENTS);
+require_once( dirname_safe(__DIR__, 4).'manna-configs/db_cfg/agent_config.php');
 	$mysqli = new mysqli($servername, $username, $password, $dbname);
 /*	$folder_name = "agents_sql_files";
           $files = scandir($folder_name);
@@ -89,16 +90,25 @@ $files2 = scandir('manna_daily/'.$folder_name);
 	foreach ($files2 as $value2) {
 if($value2 != "index.php" && $value2 != ".." && $value2 != "."){
 	$request_uri = $_SERVER ['REQUEST_URI'];
+echo '<br>request_url = ', $request_uri;
 	$pieces = explode("/",$request_uri);
-
+echo '<br>pieces array = ';
+print_r($pieces);
 echo '<h1>opening file ', $_SERVER['DOCUMENT_ROOT'].'/'.$pieces[1].'/admin/install/fill_db/manna_daily/'.$folder_name.'/'.$value2;
 echo '</h1>';
-echo '<h4 style="color:red;">In order to finish the install, we need to transmit an array of the last entries made in each of the tables to the admin_conn_credentials tablle at central.
+if($pieces[1]=="bitcoin_ad_agency"){
+	$iniinserted = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/'.$pieces[1].'/'.$pieces[2].'/admin/install/fill_db/manna_daily/'.$folder_name.'/'.$value2);
+}
+else
+{
+$iniinserted = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/'.$pieces[1].'/admin/install/fill_db/manna_daily/'.$folder_name.'/'.$value2);
 
-<br>&nbsp;<br>Without that functionality, the admin won\'t be able to push updates to the agent!</h4>';
-	$iniinserted = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/'.$pieces[1].'/admin/install/fill_db/manna_daily/'.$folder_name.'/'.$value2);
+}
+echo $iniinserted;
+
 $tobinserted = explode(";", $iniinserted);
 foreach($tobinserted as$key=>$value3){
+echo '<br>Inserting ', $value3;
 	if ($mysqli->query($value3) === TRUE) {
 				   echo "<h3>$value2 data inserted successfully</h3>";
 				} else {

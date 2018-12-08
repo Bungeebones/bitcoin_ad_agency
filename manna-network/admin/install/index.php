@@ -51,5 +51,5 @@ Complete data (sql) file (updated daily) <a target="_blank" href="fill_db/get_la
 <br>
 <h3><u>Step 4</u></h3>
 <br>
-<p>Copy or move that downloaded file into the manna-network/admin/install/fill_db/manna_daily folder. Clicking this link <a target="_blank" href="fill_db/insert_table_data.php">insert_table_data.php</a> (located in that folder) will insert the uploaded file\'s data into the proper tables:<br>';
+<p>After you have copied or moved that downloaded file into the manna-network/admin/install/fill_db/manna_daily folder and unzipped it, click this link <br><a target="_blank" href="fill_db/insert_table_data.php">insert_table_data.php</a> (located in that folder) <br>and it will insert the uploaded file's data into the proper tables.
 
