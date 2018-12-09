@@ -1,5 +1,4 @@
 <?php date_default_timezone_set('America/New_York'); 
-//include(dirname( __FILE__, 2 ). "/manna-network-agent_cfg.php");
 
 include(dirname( __FILE__, 2 ). "/manna-configs/db_cfg/auth_constants.php");
 include(dirname( __FILE__, 2 ). "/manna-configs/db_cfg/".READER_AGENTS);
