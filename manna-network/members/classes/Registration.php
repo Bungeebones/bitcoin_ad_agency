@@ -10,6 +10,8 @@
 
 class Registration
 {
+
+
     /**
      * @var object $db_connection The database connection
      */
@@ -84,10 +86,7 @@ $recruiter_lnk_num = "";
  if (array_key_exists ( "captcha" , $_POST ) AND isset($_POST["captcha"])) {
 $captcha = $_POST["captcha"];
 } 
-//these values gotten from config/config.php
-$agents_id = AGENT_ID;
-$agents_url = AGENT_URL;
-$agents_foldername = AGENT_FOLDERNAME;
+
 ///////////////  Website Info ////////////////////////
 if (array_key_exists ( "website_title" , $_POST ) AND isset($_POST["website_title"])) {
 $website_title = $_POST["website_title"];
@@ -151,7 +150,7 @@ $this->registerNewUser($user_name, $user_email, $user_password_new, $user_passwo
             try {
 
 $PREFIX = EXPLODE("_", READER_CUSTOMERS);
-include(__DIR__) . "../../../db_cfg/".$PREFIX[0]."_writer_customers_auth.php";
+include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".$PREFIX[0]."_writer_customers_auth.php");
 
 
                 $this->db_connection = new PDO('mysql:host='.$servername.';dbname='. $dbname, $username, $password, 
@@ -182,7 +181,7 @@ include(__DIR__) . "../../../db_cfg/".$PREFIX[0]."_writer_customers_auth.php";
             try {
 
 $PREFIX = EXPLODE("_", READER_CUSTOMERS);
-include(__DIR__) . "../../../db_cfg/".$PREFIX[0]."_writer_customers_auth.php";
+include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".$PREFIX[0]."_writer_customers_auth.php");
 
 
               
@@ -406,9 +405,12 @@ echo '<h1>Last Insert ID = ', $new_customer_link_id;
         $mail->Subject = EMAIL_VERIFICATION_SUBJECT;
 */
    //     $link = EMAIL_VERIFICATION_URL.'?id='.urlencode($user_id).'&verification_code='.urlencode($user_activation_hash);
-  $link = "https://".AGENT_URL."/".AGENT_FOLDERNAME."/members/register.php".'?id='.urlencode($user_id).'&verification_code='.urlencode($user_activation_hash);
+echo '<br line 408 testPHP_SELF';
 
-echo 'line 209 registration.php EMAIL_VERIFICATION_URL link = ', $link;
+
+  $link = "https://".$_SERVER['PHP_SELF']."/manna-network/members/register.php".'?id='.urlencode($user_id).'&verification_code='.urlencode($user_activation_hash);
+
+echo 'line 409 registration.php EMAIL_VERIFICATION_URL link = ', $link;
 
 echo "<h2>
 Temporarily place this code snippet  (i.e. the code starting with &lt;?php to and including the ?&gt;) to the top of your landing page. Then load/view that page with your browser ONCE and the id and the verification code will activate your link in the Manna-Network. After you have viewed it ONCE you can remove the code from your landing page. You can refresh that page if you like but the code works just the one time. 
@@ -437,7 +439,7 @@ header('Location:".$link."');
     public function verifyNewUser($user_id, $user_activation_hash)
     {
 
-include(dirname( __FILE__, 3 ). "/db_cfg/agent_cfg.php");
+include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
 
 
         // if database connection opened
@@ -476,25 +478,31 @@ include(dirname( __FILE__, 3 ). "/db_cfg/agent_cfg.php");
 
 
 		// look for promos NOTE PDO Can't do LIMIT 
-		if (!defined('AGENT_FOLDERNAME')) {
-
-		include(dirname( __FILE__, 4 ). "/manna-network-agent_cfg.php");
-		}
+	
 
 		if (!defined('READER_CUSTOMERS')) {
-		include(dirname( __FILE__, 4 ). "/".AGENT_FOLDERNAME."/db_cfg/auth_constants.php");
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
 		}
-		include(dirname( __FILE__, 4 ). "/".AGENT_FOLDERNAME."/db_cfg/".READER_CUSTOMERS);
-		include(dirname( __FILE__, 4 ). "/".AGENT_FOLDERNAME."/db_cfg/mysqli_connect.php");
-		include(dirname( __FILE__, 3 ). "/db_cfg/agent_cfg.php");
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
 		$sql = "SELECT * FROM promo_codes ORDER BY `id` DESC LIMIT 1";
 		$result = mysqli_query($mysqli, $sql) or die("Couldn't execute 'Edit 16 Account' query");
+$num_promo_codes = mysqli_num_rows($result);
+if($num_promo_codes > 0){
 		while($row = mysqli_fetch_array($result)){
 		$this_last_title = $row['promo_title'];
 		$promo_description = $row['promo_description']; 
 		$coin_type = $row['coin_type']; 
 		$promo_amount = $row['promo_amount']; 
 		}
+
+
+
+
+
+
+
 
 		//now credit the user locally
 		 if ($this->databaseConnection()) {
@@ -510,12 +518,16 @@ include(dirname( __FILE__, 3 ). "/db_cfg/agent_cfg.php");
 		$query_new_user_insert->debugDumpParams();
 		} //close  db connection
 
-
+}
+else
+{
+$promo_amount = 0;
+}
 
 		//now send user registration to central 
 		$file="http://manna-network.cash/incoming/register.php";
 		$args = array(
-		'agent_id' => $agent_ID,
+		'agent_id' => AGENT_ID,
 		'remote_user_id' => $user_id,
 		'remote_link_id' => $link_id,
 		'recruiter_lnk_num' => $recruiter_lnk_num,

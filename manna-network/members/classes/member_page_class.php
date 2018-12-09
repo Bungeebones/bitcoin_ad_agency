@@ -12,11 +12,13 @@ id     | int(21)     | NO   | PRI | NULL    |       |
 | lft    | int(10)     | NO   | MUL | 0       |       |
 | rgt    | int(10)     | NO   | MUL | 0       |   
 */
-if(!defined('READER_AGENTS')){ 
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/auth_constants.php");
-}
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/".READER_AGENTS);
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/mysqli_connect.php");
+
+if (!defined('READER_AGENTS')) {
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
+		}
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_AGENTS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
+	
 
 $sql = "SELECT `name` 
 FROM `categories_regional2`
@@ -40,11 +42,13 @@ function getUsersBalance($user_id){
 | amount_DMC  | decimal(20,10) unsigned zerofill | NO   |     | NULL              |                |
 | amount_BCH  | decimal(20,10) unsigned zerofill | NO   |     | NULL              |                |
 | txid        | varchar(65)                      | NO   |     | NULL    */
-if(!defined('READER_CUSTOMERS')){ 
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/auth_constants.php");
-}
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/".READER_CUSTOMERS);
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/mysqli_connect.php");
+
+if (!defined('READER_CUSTOMERS')) {
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
+		}
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
+	
 //`leves` ($continent`, $country`, $state`, $district1`, $city`, $district2`
 $query = "Select `id`, `amount_DMC`, `amount_BCH`   from `balance` where `user_id`='$user_id'"; 
 $result = mysqli_query($mysqli, $query); 
@@ -65,11 +69,11 @@ $balance = array($id, $user_id, $democoin_balance, $bitcoin_cash_balance );
 
 function getRegionalCompetitors($level, $loc_id, $cat_id, $link_id, $agent_ID){
 //$regionalDisplayBlocksNum tells us total levels from which we can determine "lowest" level
-if(!defined('READER_CUSTOMERS')){ 
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/auth_constants.php");
-}
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/".READER_CUSTOMERS);
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/mysqli_connect.php");
+if (!defined('READER_CUSTOMERS')) {
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
+		}
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
 //`leves` ($continent`, $country`, $state`, $district1`, $city`, $district2`
 
 $sql = "SELECT *
@@ -82,11 +86,11 @@ return $num_results;
 
 
 function getThisLinksRegionalInfo($link_id, $agent_ID){
-if(!defined('READER_CUSTOMERS')){ 
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/auth_constants.php");
-}
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/".READER_CUSTOMERS);
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/mysqli_connect.php");
+if (!defined('READER_CUSTOMERS')) {
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
+		}
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
 //`regional_sign_ups` (`id`, `continent`, `country`, `state`, `district1`, `city`, `district2`, `link_id`)
 //| id | continent | country | state | district1 | city | district2 | street | link_id | cat_id |
 $sql = "SELECT *
@@ -118,11 +122,11 @@ return false;
 
 
 function getRegionalInfo($link_id, $agent_ID){
-if(!defined('READER_CUSTOMERS')){ 
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/auth_constants.php");
-}
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/".READER_CUSTOMERS);
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/mysqli_connect.php");
+if (!defined('READER_CUSTOMERS')) {
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
+		}
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
 //`regional_sign_ups` (`id`, `continent`, `country`, `state`, `district1`, `city`, `district2`, `link_id`)
 //| id | continent | country | state | district1 | city | district2 | street | link_id | cat_id |
 $sql = "SELECT *
@@ -152,12 +156,12 @@ return false;
 
 function copyToTempPriceslotsSubscripts($user_id, $agents_ID, $link_id, $price, $cat_id, $coin_type){
 date_default_timezone_set('America/New_York');
-include(dirname( __FILE__, 3 ). "/manna-network/db_cfg/agent_cfg.php");
-if(!defined('WRITER_CUSTOMERS')){ 
-include(dirname( __FILE__, 3 ). "/manna-network/db_cfg/auth_constants.php");
-}
-include(dirname( __FILE__, 3 ). "/manna-network/db_cfg/".WRITER_CUSTOMERS);
-include(dirname( __FILE__, 3 ). "/manna-network/db_cfg/mysqli_connect.php");
+
+if (!defined('WRITER_CUSTOMERS')) {
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
+		}
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".WRITER_CUSTOMERS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
 $subscribe = 0;//will will update this when the links table is updated from central
 $start_date = time();
 $query = "INSERT INTO `temp_price_slots_subscripts` (`user_id`,`link_id`,`price_slot_amnt`,`subscribe`,`coin_type`,`cat_id`, `start_date`, `agents_ID`) VALUES (    '$user_id' ,  '$link_id','$price','$subscribe','$coin_type','$cat_id', '$start_date', '$agents_ID') "; 
@@ -188,11 +192,12 @@ echo($data);
 }
 
 function getPriceSlotPopulation($cat_id, $coin_type, $price_slot_amount){
-if(!defined('READER_CUSTOMERS')){ 
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/auth_constants.php");
-}
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/".READER_CUSTOMERS);
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/mysqli_connect.php");
+
+if (!defined('READER_CUSTOMERS')) {
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
+		}
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
 $sql = "SELECT *
 FROM `price_slots_subscripts`
 WHERE `cat_id` = '$cat_id'
@@ -249,11 +254,11 @@ $agent_ID[] = $row['agent_ID'];
 
 
 function getRegionalPopulation($link_id,$agent_ID){
-if(!defined('READER_CUSTOMERS')){ 
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/auth_constants.php");
-}
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/".READER_CUSTOMERS);
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/mysqli_connect.php");
+if (!defined('READER_CUSTOMERS')) {
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
+		}
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
 
 $sql = "SELECT *
 FROM `regional_sign_ups`
@@ -274,11 +279,11 @@ return false;
 
 function getRegionalLftRgt($regionalnum){
 
-if(!defined('READER_AGENTS')){ 
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/auth_constants.php");
-}
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/".READER_AGENTS);
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/mysqli_connect.php");
+if (!defined('READER_AGENTS')) {
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
+		}
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_AGENTS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
 
 $sql = "SELECT * 
 FROM `categories_regional2`
@@ -323,12 +328,11 @@ return false;
 }
 
 function getMinMaxPriceSlot($cat_id, $coin_type, $maxmin){
-
-if(!defined('READER_CUSTOMERS')){ 
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/auth_constants.php");
-}
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/".READER_CUSTOMERS);
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/mysqli_connect.php");
+if (!defined('READER_CUSTOMERS')) {
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
+		}
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
 
 if($maxmin=="MIN"){
 $direction = "DESC";
@@ -372,11 +376,11 @@ return false;
 
 function getLinkPayStatus($link_id){
 
-if(!defined('READER_CUSTOMERS')){ 
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/auth_constants.php");
-}
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/".READER_CUSTOMERS);
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/mysqli_connect.php");
+if (!defined('READER_CUSTOMERS')) {
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
+		}
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
 
 $sql = "SELECT `id` 
 FROM `price_slots_subscripts`
@@ -400,11 +404,11 @@ return false;
 
 function getLinkByUserIdFree($user_id){
 
-if(!defined('READER_CUSTOMERS')){ 
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/auth_constants.php");
-}
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/".READER_CUSTOMERS);
-include(dirname( __FILE__, 4 ). "/manna-network/db_cfg/mysqli_connect.php");
+if (!defined('READER_CUSTOMERS')) {
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
+		}
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
 
 if($user_id >0){
 $query = "SELECT * FROM customer_links WHERE customer_id='$user_id'  ORDER BY `user_registration_datetime` ASC";

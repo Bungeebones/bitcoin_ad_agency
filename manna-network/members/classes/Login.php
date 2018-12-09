@@ -146,15 +146,15 @@ class Login
                 // "Adding the charset to the DSN is very important for security reasons,
                 // most examples you'll see around leave it out. MAKE SURE TO INCLUDE THE CHARSET!"
 
-if (!defined('AGENT_FOLDERNAME')) {
-include(dirname( __FILE__, 4 ). "/manna-network-agent_cfg.php");
-}
-if (!defined('READER_AGENTS')) {
-include(dirname( __FILE__, 4 ). "/".AGENT_FOLDERNAME."/db_cfg/auth_constants.php");
-}
-include(dirname( __FILE__, 4 ). "/".AGENT_FOLDERNAME."/db_cfg/".READER_CUSTOMERS);
+	if (!defined('READER_CUSTOMERS')) {
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
+		}
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
 
                 $this->db_connection = new PDO('mysql:host='.$servername.';dbname='. $dbname, $username, $password);
+
 
             //    $this->db_connection = new PDO('mysql:host='. DBLOGIN_HOST .';dbname='. DBLOGIN_NAME . ';charset=utf8', DBLOGIN_USER, DBLOGIN_PASS);
               

@@ -18,10 +18,11 @@ CREATE TABLE IF NOT EXISTS `promo_codes` (
 `promo_title`                  varchar(25)           NULL,                   
  `promo_description`            varchar(225)          NULL,                   
  `coin_type`                    varchar(60)           NULL,                   
- `promo_amount`                 decimal(20,10) unsigned zerofill NOT NULL
+ `promo_amount`                 decimal(20,10) unsigned zerofill NOT NULL,
+  PRIMARY KEY (`id`)
 ) 
 
- ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ;
+ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ;
 ";
 if ($conn->query($sql) === TRUE) {
     echo "<br>Table promo_codes created successfully";

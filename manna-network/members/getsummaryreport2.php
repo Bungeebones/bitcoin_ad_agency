@@ -41,10 +41,10 @@ $getLowestBCHPriceSlotPaid =  0;
 }
 
 if(!defined('READER_AGENTS')){ 
-include(dirname( __FILE__, 3 ). "/manna-network/db_cfg/auth_constants.php");
+include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
 }
-include(dirname( __FILE__, 3 ). "/manna-network/db_cfg/".READER_AGENTS);
-include(dirname( __FILE__, 3 ). "/manna-network/db_cfg/mysqli_connect.php");
+include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_AGENTS);
+include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
 if (!$mysqli) {
     die('Could not connect: ' . mysqli_error($mysqli));
 }
@@ -60,10 +60,10 @@ $free_link_position = $link_cnt_free % 20;
 $menu_str = SUMMARY_AJAX_HEADER.SUMMARY_AJAX_FREE_PAGE_COUNT1.$page_count.SUMMARY_AJAX_FREE_PAGE_COUNT2.$free_link_position.SUMMARY_AJAX_FREE_PAGE_COUNT3.SUMMARY_AJAX_NUM_LINKS.$link_cnt_free;
 
 if(!defined('READER_CUSTOMERS')){ 
-include(dirname( __FILE__, 3 ). "/manna-network/db_cfg/auth_constants.php");
+include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
 }
-include(dirname( __FILE__, 3 ). "/manna-network/db_cfg/".READER_CUSTOMERS);
-include(dirname( __FILE__, 3 ). "/manna-network/db_cfg/mysqli_connect.php");
+include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
+include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
 $sql="SELECT * FROM price_slots_subscripts where cat_id = '$q' AND subscribe = 1";
 $result = mysqli_query($mysqli,$sql);
 //get the num rows

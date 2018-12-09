@@ -28,7 +28,7 @@ CREATE TABLE `users` (
   `user_activation_hash` varchar(40)  DEFAULT NULL COMMENT 'user''s email verification hash string',
   `user_password_reset_hash` char(40)  DEFAULT NULL COMMENT 'user''s password reset code',
   `user_password_reset_timestamp` bigint(20) DEFAULT NULL COMMENT 'timestamp of the password reset request',
-  `agents_lnk_num` int(12) DEFAULT NULL,
+  `recruiter_lnk_num` int(12) DEFAULT NULL,
   `agents_ID` int(12) DEFAULT NULL,
   `access_level` int(1) DEFAULT NULL,
   `user_registration_datetime` varchar(25)  DEFAULT NULL,
@@ -42,6 +42,7 @@ CREATE TABLE `users` (
 `location_id` int(12) DEFAULT NULL,
 `website_street` varchar(80) DEFAULT NULL,
 `website_district` varchar(60)  DEFAULT NULL,
+`wants_tobea_widget` int(12) DEFAULT NULL,
 
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `user_name` (`user_name`),

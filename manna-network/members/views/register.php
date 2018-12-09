@@ -1,10 +1,11 @@
   <?php
 
-
+echo '<br>in views/rgistration  ';
+echo '<br>dirname( __DIR__, 3 ) = ', dirname( __DIR__, 3 );
 function getChangeMeStatus($url){
-//if (!defined('AGENT_FOLDERNAME')) {
-//include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
-//}
+if (!defined('AGENT_FOLDERNAME')) {
+include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
+}
 if (!defined('READER_CUSTOMERS')) {
 include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
 }
@@ -90,9 +91,9 @@ if (isset($registration)) {
 //check 
 // load mysqli connect
 //the four constants (each to use four db users, permiisions, passwords and dbs) are READER_CUSTOMERS, WRITER_CUSTOMERS (for the public=facing users db) and READER_AGENTS, WRITER_AGENTS for the agents db - which is, essentially, the backend administrative db to handle syncing with the network. 
-//if (!defined('AGENT_FOLDERNAME')) {
-//include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
-//}
+if (!defined('AGENT_FOLDERNAME')) {
+include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
+}
 if (!defined('READER_AGENTS')) {
 include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
 }

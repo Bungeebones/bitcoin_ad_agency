@@ -308,6 +308,7 @@ else
 					include('create_db/create_cust_tables/regional_sign_ups_tbl_create.php');
 					include('create_db/create_cust_tables/customer_links_tbl_create.php');
 					include('create_db/create_cust_tables/users_tbl_create.php');
+                                        include('create_db/create_cust_tables/customer_promo_tbl_create.php');
 include('create_db/create_agent_tables/categories_tbl_create.php');
 include('create_db/create_agent_tables/categories_regional2_tbl_create.php');
 include('create_db/create_agent_tables/links_tbl_create.php');
@@ -354,7 +355,7 @@ $db_connect = checkRootMysqlUser();
 <h1>Manna Network Agent Version Installation</h1>
 <h4>First, we confirm that you have configured the manna-configs/agent_config.php file.</h4>
 <?php
-if($agent_url=="insert your site's domain name here"){
+/*if($agent_url=="insert your site's domain name here"){
 echo '<p style="color:red;">Test 1 FAILED - You need to configure the $agent_url in the manna-configs/agent_config.php file
 <br>Enter your website\'s domain name between the quotes';
 }
@@ -362,10 +363,10 @@ else
 {
 echo '<p style="color:darkgreen;">Test 1 SUCCESS - It appears you have correctly configured your site\'s domain name';
 }
-
+*/
 
 if(AGENT_URL=="insert your site's domain name here"){
-echo '<p style="color:red;">Test 2 FAILED - You need to configure the AGENT_URL in the manna-configs/agent_config.php file
+echo '<p style="color:red;">Test 1 FAILED - You need to configure the AGENT_URL in the manna-configs/agent_config.php file
 <br>Enter your website\'s domain name between the quotes';
 }
 else
@@ -378,37 +379,36 @@ echo '<p style="color:darkgreen;">Test 2 SUCCESS - It appears you have correctly
 
 
 if(AGENT_ID=="insert your agent ID number here"){
-echo '<p style="color:red;">Test 3 FAILED - You need to configure the AGENT_ID
-<br>If you have not gotten one yet, register at <a target="_blank" href="http://manna-network.cash/agents/register.php">http://manna-network.cash/agents/register.php</a> Then, login to retrieve your agent id AND your $exchange_pw (also in the config file)';
-}
+echo '<p style="color:red;">Test 2 FAILED - You need to configure the AGENT_ID
+<br>If you have not gotten one yet, contact the adminstrator at <a target="_blank" href="http://manna-network.com">http://manna-network.com</a> to apply for your agent id AND your $exchange_pw (BOTH needed in the config file)';}
 elseif(!is_int(AGENT_ID)){
-echo '<p style="color:red;">Test 3 FAILED - You need to configure the AGENT_ID as an INTEGER (i.e. no decimals, no quotes - just a number etc
-<br>If you have not gotten one yet, register at <a target="_blank" href="http://manna-network.cash/agents/register.php">http://manna-network.cash/agents/register.php</a>. Then, login to retrieve your agent id AND your $exchange_pw (also needed in the config file)';
+echo '<p style="color:red;">Test 2 FAILED - You need to configure the AGENT_ID as an INTEGER (i.e. no decimals, no quotes - just a number etc
+<br>If you have not gotten one yet, contact the adminstrator at <a target="_blank" href="http://manna-network.com">http://manna-network.com</a> to apply for your agent id AND your $exchange_pw (BOTH needed in the config file)';
 }
 else
 {
-echo '<p style="color:darkgreen;">Test 3 SUCCESS - It appears you have correctly configured the AGENT_ID';
+echo '<p style="color:darkgreen;">Test 2 SUCCESS - It appears you have correctly configured the AGENT_ID';
 }
 
 if($db_connect == "Connected successfully"){
 
-echo '<p style="color:darkgreen;">Test 4 SUCCESS - This script has successfully connected to the Mysql database through the temporary user in the manna-configs/agent_config.php file. Remember to remove that user\'s login credentials after installation (for an extra level of security)';
+echo '<p style="color:darkgreen;">Test 3 SUCCESS - This script has successfully connected to the Mysql database through the temporary user in the manna-configs/agent_config.php file. Remember to remove that user\'s login credentials after installation (for an extra level of security)';
 
 }
 else
 {
-echo '<p style="color:red;">Test 4 FAILED - This script currently cannot connect to the Mysql database. <p>Please configure the user in the manna-configs/agent_config.php file.<p>Grant that user enough privileges to create databases, add users and grant privileges to those users. <p>After installation, remove the password from that user for added security. ';
+echo '<p style="color:red;">Test 3 FAILED - This script currently cannot connect to the Mysql database. <p>Please configure the user in the manna-configs/agent_config.php file.<p>Grant that user enough privileges to create databases, add users and grant privileges to those users. <p>After installation, remove the password from that user for added security. ';
 } 
 
 if($exchange_pw == "insert your exchange_pw here" ){
-echo '<p style="color:red;">Test 5 FAILED - You need to configure the $exchange_pw
-<br>If you have not gotten one yet, register at <a target="_blank" href="http://manna-network.cash/agents/register.php">http://manna-network.cash/agents/register.php</a> Then, login to retrieve your agent id AND your $exchange_pw (BOTH needed in the config file)';
+echo '<p style="color:red;">Test 4 FAILED - You need to configure the $exchange_pw
+<br>If you have not gotten one yet, contact the adminstrator at <a target="_blank" href="http://manna-network.com">http://manna-network.com</a> to apply for your agent id AND your $exchange_pw (BOTH needed in the config file)';
 
 
 }
 else
 {
-echo '<p style="color:darkgreen;">Test 5 SUCCESS - It appears you have correctly configured your $exchange_pw setting';
+echo '<p style="color:darkgreen;">Test 4 SUCCESS - It appears you have correctly configured your $exchange_pw setting';
 } 
 
 

@@ -10,10 +10,10 @@
 require_once('translations/en.php');
 $q = $_GET['q'];
 if(!defined('READER_AGENTS')){ 
-include(dirname( __FILE__, 3 ). "/manna-network/db_cfg/auth_constants.php");
+include(dirname(__DIR__, 2)."/manna-configs/db_cfg/auth_constants.php");
 }
-include(dirname( __FILE__, 3 ). "/manna-network/db_cfg/".READER_AGENTS);
-include(dirname( __FILE__, 3 ). "/manna-network/db_cfg/mysqli_connect.php");
+include(dirname(__DIR__, 2)."/manna-configs/db_cfg/".READER_AGENTS);
+include(dirname(__DIR__, 2)."/manna-configs/db_cfg/mysqli_connect.php");
 if (!$mysqli) {
     die('Could not connect: ' . mysqli_error($mysqli));
 }
