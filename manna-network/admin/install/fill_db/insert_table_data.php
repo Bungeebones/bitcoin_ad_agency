@@ -90,10 +90,10 @@ $files2 = scandir('manna_daily/'.$folder_name);
 	foreach ($files2 as $value2) {
 if($value2 != "index.php" && $value2 != ".." && $value2 != "."){
 
-echo '<h1>opening file ', $_SERVER['DOCUMENT_ROOT'].'/'.$agent_folder.'/admin/install/fill_db/manna_daily/'.$folder_name.'/'.$value2;
+echo '<h1>opening file ', $_SERVER['DOCUMENT_ROOT'].'/'.AGENT_FOLDERNAME.'/admin/install/fill_db/manna_daily/'.$folder_name.'/'.$value2;
 echo '</h1>';
 
-	$iniinserted = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/'.$agent_folder.'/admin/install/fill_db/manna_daily/'.$folder_name.'/'.$value2);
+	$iniinserted = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/'.AGENT_FOLDERNAME.'/admin/install/fill_db/manna_daily/'.$folder_name.'/'.$value2);
 
 $tobinserted = explode(";", $iniinserted);
 foreach($tobinserted as$key=>$value3){
