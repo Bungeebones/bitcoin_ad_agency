@@ -1,8 +1,8 @@
 <?php
-if(!defined("DB_NAME_CUSTOMERS")){
+if(!defined("DB_NAME_AGENTS")){
 include(dirname( __FILE__, 6 ) . "/manna-configs/db_cfg/auth_constants.php");
 }
-$dbname = DB_NAME_CUSTOMERS; //both names of each database were saved to the auth+
+$dbname = DB_NAME_AGENTS; //both names of each database were saved to the auth+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
