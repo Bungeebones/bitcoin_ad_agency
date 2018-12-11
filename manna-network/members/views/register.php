@@ -24,8 +24,8 @@ echo "There has been a problem processing your request. We haven't detected your
 <p>3) Then copy and paste your edited version from your text editor into the command line (which will insert the data into the database).
 <p>4) Refresh this page.
 <h3>
- <hr><p  style='font-weight:bold;'>INSERT into `customer_links`(`id`, `user_id`, `website_title`, `website_description`, `website_url`, `category_id`, `newcatsuggestion`, `location_id`, `website_street`, `website_district`,`customer_id`, `user_registration_datetime`, `wants_tobea_widget`, `recruiter_lnk_num`) VALUES  ( '1', '14', 'DownLine com', 'DownLine com is an agent of the Manna Network and is dedicated to getting you and your website more income and more web traffic!', 'https://downline.com','9', '',  '0',  '','','1','1','1','1' );<hr>";
-</h3>
+ <hr><p  style='font-weight:bold;'>INSERT into `customer_links`(`id`, `user_id`, `website_title`, `website_description`, `website_url`, `category_id`, `newcatsuggestion`, `location_id`, `website_street`, `website_district`,`customer_id`, `user_registration_datetime`, `wants_tobea_widget`, `recruiter_lnk_num`) VALUES  ( '1', '14', 'DownLine com', 'DownLine com is an agent of the Manna Network and is dedicated to getting you and your website more income and more web traffic!', 'https://downline.com','9', '',  '0',  '','','1','1','1','1' );<hr></h3>";
+
 		     exit();
 }        
  	while($row = mysqli_fetch_array($result)){
