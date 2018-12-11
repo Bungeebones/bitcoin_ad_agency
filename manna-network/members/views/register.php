@@ -17,7 +17,7 @@ $query = "SELECT id, website_url FROM `customer_links` where `website_url` LIKE 
 
 $result = mysqli_query($mysqli, $query);
              if (mysqli_num_rows($result)<1){  
-echo "There has been a problem processing your request. We haven't detected your website is registered in YOUR OWN DATABASE? You cannot use this registration form without adding your own website firs.? Please follow these directions to add your data from the command line and then try this page again. If you continue to have problems or need further assistance please use the contact form to get tech support. Thank you!
+echo "There has been a problem processing your request. We haven't detected your website is registered in YOUR OWN DATABASE? You cannot use this registration form without adding your own website first.? Please follow these directions to add your data from the command line and then try this page again. If you continue to have problems or need further assistance please use the contact form to get tech support. Thank you!
 
 <p>&nbsp;<p><span  style='font-weight:bold;'>You will need one of the database names you created. </span>IF you didn't change the default names that the form presented to you then the database name you will need is: \"manna_customers\" (without the quotes). If you entered something different, and FORGOT its name, then after step 2, below, enter \"show databases;\" (without the quotes) into the command line to see what databases are installed. You should be able to find the one you created (i.e. in place of the default \"manna_customers\" name).
 
@@ -26,9 +26,10 @@ echo "There has been a problem processing your request. We haven't detected your
 <p>3) Then type the command \"use\" (without the quotes) followed by the name of the customers database you created with the installation form (see above if you forgot). End the command you just entered with the semi-colon that mysql requires to finish a command. 
 <p>3) Then copy and paste your edited version from your text editor into the command line (which will insert the data into the database).
 <p>4) Refresh this page.
-
+<h3>
  <hr><p  style='font-weight:bold;'>INSERT into `customer_links`(`id`, `user_id`, `website_title`, `website_description`, `website_url`, `category_id`, `newcatsuggestion`, `location_id`, `website_street`, `website_district`,`customer_id`, `user_registration_datetime`, `wants_tobea_widget`, `recruiter_lnk_num`) VALUES  ( '1', '14', 'DownLine com', 'DownLine com is an agent of the Manna Network and is dedicated to getting you and your website more income and more web traffic!', 'https://downline.com','9', '',  '0',  '','','1','1','1','1' );<hr>";
-exit();
+</h3>
+		     exit();
 }        
  	while($row = mysqli_fetch_array($result)){
 		$id = $row['id']; 
