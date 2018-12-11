@@ -1,7 +1,4 @@
   <?php
-
-echo '<br>in views/rgistration  ';
-echo '<br>dirname( __DIR__, 3 ) = ', dirname( __DIR__, 3 );
 function getChangeMeStatus($url){
 if (!defined('AGENT_FOLDERNAME')) {
 include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
@@ -53,10 +50,6 @@ if ($registration->messages) {
     }
 }
 
-
-
-
-//echo file_get_contents('grouperheader_masthead.php');
 
 include('bootstrap_header.php'); 
 
