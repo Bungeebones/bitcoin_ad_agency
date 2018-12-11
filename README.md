@@ -9,8 +9,19 @@ More importantly, it opens up the potential for a "joint venture" between the cu
 Agency level participants must already be registered as users in the Manna Network system in order to activate their script. If you need a Manna Network account you can find one of our agents to register at here: <a target="_blank" href="http://manna-network.cash/agents/agents_list.php">http://manna-network.cash/agents/agents_list.php</a>
 
 
+<h3>Installation</h3>
+<h4>Clone method</h4>
+In terminal, move to the installation location/folder of your website and type:
+-> git init
+-> git clone https://github.com/Manna-Network/bitcoin_ad_agency
+-> sudo chgrp -R www-data bitcoin_ad_agency
 
-
+<h4>Download method</h4>
+1) Download the zip file from Github
+2) Move the zip file to the installation location/folder of your website
+3) Unzip the file (and delete the zip file when done)
+4) In terminal, move to the installation location/folder of your website and type:
+   -> sudo chgrp -R www-data bitcoin_ad_agency
 
 
 
