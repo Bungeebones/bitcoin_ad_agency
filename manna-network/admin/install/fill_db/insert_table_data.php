@@ -3,6 +3,13 @@ echo 'Now that we have the agent user downloaded the weekly zip and unpacking it
 <br>1)include the admins database credential file so we can insert into the tables
 <br>2) In the foreach section below, we need to get the name of the file and match it to the right table and insert<br>
 ';
+
+//test file permissions
+
+
+
+
+
 function dirname_safe($path, $level = 0){
     $dir = explode(DIRECTORY_SEPARATOR, $path);
     $level = $level * -1;

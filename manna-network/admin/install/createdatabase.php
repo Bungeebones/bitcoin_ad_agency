@@ -312,7 +312,9 @@ else
 include('create_db/create_agent_tables/categories_tbl_create.php');
 include('create_db/create_agent_tables/categories_regional2_tbl_create.php');
 include('create_db/create_agent_tables/links_tbl_create.php');
-include('create_db/create_agent_tables/recruiters_tree_tbl_create.php');			
+include('create_db/create_agent_tables/recruiters_tree_tbl_create.php');
+include('create_db/create_agent_tables/promo_codes_tbl_create.php');
+include('create_db/create_agent_tables/pegged_for_deletion_tbl_create.php');			
 			echo
 			'<h3> Summary: Except for errors reported above, Two Data base have been created, along with two users for each, and each user was granted either readonly access or write/read abilities to that db. A file was created for each user essentially saving that users login credentials with different 32 character long passwords. A "constants" file was created and will be included at every data base call to select the appropriate user using the minimum privileges for security. Lastly, we created the database tables for each of the two databases for use by your installed script.</h3>';
 
@@ -371,34 +373,34 @@ echo '<p style="color:red;">Test 1 FAILED - You need to configure the AGENT_URL 
 }
 else
 {
-echo '<p style="color:darkgreen;">Test 2 SUCCESS - It appears you have correctly configured your site\'s domain name';
+echo '<p style="color:darkgreen;">Test 1 SUCCESS - It appears you have correctly configured your site\'s domain name';
 }
 
 
+if($db_connect == "Connected successfully"){
 
+echo '<p style="color:darkgreen;">Test 2 SUCCESS - This script has successfully connected to the Mysql database through the temporary user in the manna-configs/agent_config.php file. Remember to remove that user\'s login credentials after installation (for an extra level of security)';
+
+}
+else
+{
+echo '<p style="color:red;">Test 2 FAILED - This script currently cannot connect to the Mysql database. <p>Please configure the user in the manna-configs/agent_config.php file.<p>Grant that user enough privileges to create databases, add users and grant privileges to those users. <p>After installation, you will be prompted to remove the password from that user (or the user) for added security. ';
+} 
 
 
 if(AGENT_ID=="insert your agent ID number here"){
-echo '<p style="color:red;">Test 2 FAILED - You need to configure the AGENT_ID
+echo '<p style="color:red;">Test 3 FAILED - You need to configure the AGENT_ID
 <br>If you have not gotten one yet, contact the adminstrator at <a target="_blank" href="http://manna-network.com">http://manna-network.com</a> to apply for your agent id AND your $exchange_pw (BOTH needed in the config file)';}
 elseif(!is_int(AGENT_ID)){
-echo '<p style="color:red;">Test 2 FAILED - You need to configure the AGENT_ID as an INTEGER (i.e. no decimals, no quotes - just a number etc
+echo '<p style="color:red;">Test 3 FAILED - You need to configure the AGENT_ID as an INTEGER (i.e. no decimals, no quotes - just a number etc
 <br>If you have not gotten one yet, contact the adminstrator at <a target="_blank" href="http://manna-network.com">http://manna-network.com</a> to apply for your agent id AND your $exchange_pw (BOTH needed in the config file)';
 }
 else
 {
-echo '<p style="color:darkgreen;">Test 2 SUCCESS - It appears you have correctly configured the AGENT_ID';
+echo '<p style="color:darkgreen;">Test 3 SUCCESS - It appears you have correctly configured the AGENT_ID';
 }
 
-if($db_connect == "Connected successfully"){
 
-echo '<p style="color:darkgreen;">Test 3 SUCCESS - This script has successfully connected to the Mysql database through the temporary user in the manna-configs/agent_config.php file. Remember to remove that user\'s login credentials after installation (for an extra level of security)';
-
-}
-else
-{
-echo '<p style="color:red;">Test 3 FAILED - This script currently cannot connect to the Mysql database. <p>Please configure the user in the manna-configs/agent_config.php file.<p>Grant that user enough privileges to create databases, add users and grant privileges to those users. <p>After installation, remove the password from that user for added security. ';
-} 
 
 if($exchange_pw == "insert your exchange_pw here" ){
 echo '<p style="color:red;">Test 4 FAILED - You need to configure the $exchange_pw
