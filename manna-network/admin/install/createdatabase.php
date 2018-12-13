@@ -185,7 +185,7 @@ define("DB_NAME_AGENTS", "'.$dbnameagents.'");
 
 $constants_save_location = dirname( __FILE__, 4 )."/manna-configs/db_cfg/auth_constants.php";
 echo '<br>line 186 $constants_save_location = = ', $constants_save_location;
-$handle = fopen($constants_save_location, 'w') or die('<br> Cannot open file line 186:  '.$constants_save_location); //open file for writing ('w','r','a')...
+$handle = fopen($constants_save_location, 'w') or die('<br> Cannot open file. The installed files from GitHub need to be owned by the group www-data line 186:  '.$constants_save_location); //open file for writing ('w','r','a')...
 fwrite($handle, $constants_writer);
 
 		  
@@ -308,7 +308,7 @@ else
 					include('create_db/create_cust_tables/regional_sign_ups_tbl_create.php');
 					include('create_db/create_cust_tables/customer_links_tbl_create.php');
 					include('create_db/create_cust_tables/users_tbl_create.php');
-                                        include('create_db/create_cust_tables/customer_promo_tbl_create.php');
+                                      
 include('create_db/create_agent_tables/categories_tbl_create.php');
 include('create_db/create_agent_tables/categories_regional2_tbl_create.php');
 include('create_db/create_agent_tables/links_tbl_create.php');

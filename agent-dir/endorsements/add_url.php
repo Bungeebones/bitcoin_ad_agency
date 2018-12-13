@@ -6,12 +6,14 @@
 <p  align="left">Second, the network uses a Bitcoin only based payment system and since Bitcoin is such a new Internet payment system we like to take this opportunity to prep you a little bit. Don't let the fact that you never heard of Bitcoin scare you because, remember, you can advertise for free (and just ignore all the Bitcoin related stuff). But we have also gone to great lengths to help educate you about Bitcoin and to provide you with free tools to become experienced with it. In fact, we even built a tool that will let you "pay" with a free test demo version of Bitcoin and move your link ahead of all the previous free links just for trying out and using the demo. Take a peek at the "About Bitcoin" section of the site (located in the web directory's top nav bar). 
 <p  align="left">So now that you know that this great web directory is part of a bigger effort than just our own, fill out the form below to register at the co-operative at BungeeBones.com. Then login there,  add your link and, optionally, add a web directory of your own to your website!
 </div>     
-
+<?php
+$server_url=$_SERVER['HTTP_HOST'];
+?>
    <div class="modalFooter">
                      <div class="acc-section">
 				<div style="text-align: center;">
 				
-<iframe src="https://<?php echo $agent_url."/". $agent_folder;?>/members/register.php?referer_lnk_num=<?php echo $_GET['lnk_num'];?>&remote_server=<?php echo $server_url;?>" width="100%" height="750"]
+<iframe src="<?php echo AGENT_URL."/". AGENT_FOLDERNAME;?>/members/register.php?referer_lnk_num=<?php echo $_GET['lnk_num'];?>&remote_server=<?php echo $server_url;?>" width="100%" height="750"]
 		</iframe>				
 </div> 
 
