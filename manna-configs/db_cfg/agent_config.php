@@ -16,7 +16,6 @@ define("AGENT_URL", "https://downline.com");
 }
 if (!defined('AGENT_REGISTRATION_PAGE')) {
 $agent_registration_page = AGENT_URL."/".AGENT_FOLDERNAME."/members/register.php";
-echo '<br>$agent_registration_page = ', $agent_registration_page;
 define('AGENT_REGISTRATION_PAGE',$agent_registration_page);
 }
 if (!defined('AGENT_TECH_SUPPORT_CONTACT_PAGE')) {

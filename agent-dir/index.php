@@ -1,9 +1,6 @@
 <?php 
 include('includes/bootstrap_header.php');
 include('translations/en.php');
-
-echo 'dirname( __DIR__, 1 ) = ', dirname( __DIR__, 1 );
-
 include(dirname( __DIR__, 1 ).'/agent-dir/js/registration.js');
 include(dirname( __DIR__, 1 ).'/agent-dir/translations/en.js'); 
 $lnk_num = 1; 

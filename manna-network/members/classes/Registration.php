@@ -440,8 +440,6 @@ header('Location:".$link."');
     {
 
 include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
-echo 'user id = ', $user_id;
-
         // if database connection opened
         if ($this->databaseConnection()) {
 
