@@ -7,7 +7,6 @@ if (!defined('AGENT_FOLDERNAME')) {
 define("AGENT_FOLDERNAME", "manna-network");
 }
 
-
 //IMPORTANT - YOU NEED TO CONTACT MANNA NETWORK ADMINISTRATION TO GET A VALID AGENT ID. IMPROPER CONFIGURATION CAN RESULT IN LOSS OF YOUR AND YOUR DOWNLINE'S COMMISSIONS AND ENLISTMENT CREDITS! 
 if (!defined('AGENT_ID')) {
 define("AGENT_ID", 8);
@@ -15,6 +14,15 @@ define("AGENT_ID", 8);
 if (!defined('AGENT_URL')) {
 define("AGENT_URL", "https://downline.com");
 }
+if (!defined('AGENT_REGISTRATION_PAGE')) {
+$agent_registration_page = AGENT_URL."/".AGENT_FOLDERNAME."/members/register.php";
+echo '<br>$agent_registration_page = ', $agent_registration_page;
+define('AGENT_REGISTRATION_PAGE',$agent_registration_page);
+}
+if (!defined('AGENT_TECH_SUPPORT_CONTACT_PAGE')) {
+define('AGENT_TECH_SUPPORT_CONTACT_PAGE',"https://downline.com/contact.php");
+}
+
 //root user with full grant capabilities - used for setup only - removing password after installation is fine
 $servername = "localhost";
 $username = "root";
