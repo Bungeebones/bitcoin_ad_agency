@@ -1,6 +1,5 @@
   <?php
 function getChangeMeStatus($url){
-
 if (!defined('AGENT_FOLDERNAME')) {
 include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
 }
@@ -9,32 +8,33 @@ include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
 }
 include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
 include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
-include('bootstrap_header.php'); 
-include(dirname(__DIR__, 1)."/js/registration.js"); 
+
 
 $query = "SELECT id, website_url FROM `customer_links` where `website_url` LIKE '%".$url."%'";
 
 $result = mysqli_query($mysqli, $query);
              if (mysqli_num_rows($result)<1){  
-
-if(!array_key_exists("flag", $_GET) OR !isset($_GET['flag']) OR $_GET['flag'] !== "true"  ){ 
-
 echo "There has been a problem processing your request. We haven't detected your website is registered in YOUR OWN DATABASE? You cannot use this registration form without adding your own website first.? Please follow these directions to add your data from the command line and then try this page again. If you continue to have problems or need further assistance please use the contact form to get tech support. Thank you!
 
-<p>&nbsp;<p><span  style='font-weight:bold;'>Simply Register THIS website/domain (i.e. $url) as your account's FIRST user and FIRST website. In order to accomplish that, you need to send this script a \"flag\" through the url (i.e. the address in the browser window).
-<p>&nbsp;<p><span  style='font-weight:bold;'><h3>Clicking the following link will enable you to add the administrative agent website and domain and user info:</h3>
-<p>&nbsp;<p><span  style='font-weight:bold;'><h3><a href='http://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/members/register.php?referer_lnk_num=".$_GET['referer_lnk_num']."&remote_server=".$_GET['remote_server']."&flag=true'>http://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/members/register.php?referer_lnk_num=".$_GET['referer_lnk_num']."&remote_server=".$_GET['remote_server']."&flag=true</a>";
+<p>&nbsp;<p><span  style='font-weight:bold;'>You will need one of the database names you created. </span>IF you didn't change the default names that the form presented to you then the database name you will need is: \"manna_customers\" (without the quotes). If you entered something different, and FORGOT its name, then after step 2, below, enter \"show databases;\" (without the quotes) into the command line to see what databases are installed. You should be able to find the one you created (i.e. in place of the default \"manna_customers\" name).
+
+<p>&nbsp;<p>1) Copy the MySql statement below to a text editor and edit the \"downline.com\" portions of it to reflect your own website location
+<p>2) Open a terminal and type mysql -u root -p (enter your mysql root password when prompted) to add the data to your database.
+<p>3) Then type the command \"use\" (without the quotes) followed by the name of the customers database you created with the installation form (see above if you forgot). End the command you just entered with the semi-colon that mysql requires to finish a command. 
+<p>3) Then copy and paste your edited version from your text editor into the command line (which will insert the data into the database).
+<p>4) Refresh this page.
+<h3>
+ <hr><p  style='font-weight:bold;'>INSERT into `customer_links`(`id`, `user_id`, `website_title`, `website_description`, `website_url`, `category_id`, `newcatsuggestion`, `location_id`, `website_street`, `website_district`,`customer_id`, `user_registration_datetime`, `wants_tobea_widget`, `recruiter_lnk_num`) VALUES  ( '1', '14', 'DownLine com', 'DownLine com is an agent of the Manna Network and is dedicated to getting you and your website more income and more web traffic!', 'https://downline.com','9', '',  '0',  '','','1','1','1','1' );<hr></h3>";
+
 		     exit();
-	}
-	elseif(array_key_exists("flag", $_GET) AND isset($_GET['flag']) AND $_GET['flag'] == "true"  ){ 
-	echo '<h1>You are about to make a ONE-TIME configuration of what will be your adminstrative account, thus making this domain (i.e. '. $url. ') the "agency" website. Be sure the information is accurate and there are no "typos"</h1>';
-			    
-	}
 }        
  	while($row = mysqli_fetch_array($result)){
 		$id = $row['id']; 
+		  
 		}
-       return $id;
+return $id;
+
+
 }
 
 if ($registration->errors) {
@@ -51,7 +51,9 @@ if ($registration->messages) {
 }
 
 
+include('bootstrap_header.php'); 
 
+include($_SERVER['DOCUMENT_ROOT']."/manna-network/members/js/registration.js"); 
  if (!$registration->registration_successful && !$registration->verification_successful) { 
   if (isset($login)) {
     if ($login->errors) {
@@ -105,9 +107,9 @@ $link_id_at_local = getChangeMeStatus($cleaned_host);
 
 if(array_key_exists('referer_lnk_num', $_GET) AND $_GET['referer_lnk_num']  =="change_me")
                 {   
-//Dev NOTE: IF the incoming GET value coming in has "change me"it means the "membership" version (the php script or wordpress plugin) hasn't configured their script on their site correctly
+//Dev NOTE: IF the incoming GET value coming in it means they ahaven't configured their script on their site correctly
 //Two things can be wrong
-// 1) The deafult setting "change me" is still there (they need their link_num (reported to them as their affiliate number)or
+// 1) The deafult setting "change me" is still there or
 // 2) They entered a wrong link_id
 //We can only check for one accurately
 
@@ -123,7 +125,7 @@ $recruiter_lnk_num=  $_GET['referer_lnk_num']; //NOTE THE NAME CHANGE!!!!!
 }
 else
 {
-$recruiter_lnk_num = "";
+$recruiter_lnk_num = "1";
 }
 
 /*
@@ -164,7 +166,6 @@ $recruiter_lnk_num = "";
 					echo "<h1>Your  IP address is : ".  $ipaddress ;
 					echo " <img src='../images/Embarrassed_Chimpanzee.jpg'> AND IT HAS BEEN BANNED FOR ABUSING THIS SYSTEM. ALL AVENUES OF REPORTING YOU TO GOVERNMENT AGENCIES, ISPs, EMAIL HOSTS ETC ARE BEING PURSUED</h1>";
 					exit();
-//you can also add a redirect here. I'll sometimes redirect them to the law enforcement agency in their country (based on their ip) IPs from Russia, for example, can be directed to the KGB website. US ip addresses can be redirected to the FBI
 					}
 		       // echo "Your IP address is : $ipaddress";
 		}
@@ -307,11 +308,8 @@ $display_blockmp .='
     <label for="website_street">'. WORDING_REGISTRATION_STREET.'</label>
      <input id="website_street" type="text"  name="more_info_website_street" style="width: 350px;"/>
       <label for="website_district">'. WORDING_REGISTRATION_DISTRICT.'</label>
-        <input id="website_district" type="text"  name="website_district" style="width: 350px;"/></div>';
-
-if(!array_key_exists("flag", $_GET) OR !isset($_GET['flag']) OR $_GET['flag'] !== "true"  ){
-$display_blockmp .= ' <h1>'.WORDING_REGISTRATION_RECIPROCAL_HEADER.'<input type="checkbox" name="wants_tobea_widget" value="1">'.
-WORDING_REGISTRATION_RECIPROCAL.'
+        <input id="website_district" type="text"  name="website_district" style="width: 350px;"/></div>'.
+WORDING_REGISTRATION_RECIPROCAL_HEADER.' <h1><input type="checkbox" name="wants_tobea_widget" value="1">'.WORDING_REGISTRATION_RECIPROCAL.'
      <div style="width:600px; margin:auto; background-color: #f2f2f2; color: #666666; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px;">
 
       <label for="widget_software_links">'. WIDGET_SOFTWARE_LINKS.'</label>
@@ -326,9 +324,7 @@ WORDING_REGISTRATION_RECIPROCAL.'
            <li>How to send and receive it (with addresses)</li>
          </ul>
        Bitcoin101.today<br> All for just $1.01</a>
-   </div>';
-}
-$display_blockmp .= '
+   </div>
     <br>     
      <img src="tools/showCaptcha.php" alt="captcha" />
       <label>'.WORDING_REGISTRATION_CAPTCHA.'</label>

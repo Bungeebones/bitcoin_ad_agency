@@ -438,17 +438,17 @@ header('Location:".$link."');
 
     public function verifyNewUser($user_id, $user_activation_hash)
     {
-
+echo 'user id = intval(trim($user_id)) ', intval(trim($user_id));
 include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
-
-
         // if database connection opened
         if ($this->databaseConnection()) {
 
            // try to update user with specified information
             $query_update_user = $this->db_connection->prepare('UPDATE users SET user_active = 1, user_activation_hash = NULL WHERE user_id = :user_id AND user_activation_hash = :user_activation_hash');
+
             $query_update_user->bindValue(':user_id', intval(trim($user_id)), PDO::PARAM_INT);
             $query_update_user->bindValue(':user_activation_hash', $user_activation_hash, PDO::PARAM_STR);
+
             $query_update_user->execute();
 
             if ($query_update_user->rowCount() > 0) {
