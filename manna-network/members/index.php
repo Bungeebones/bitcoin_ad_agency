@@ -17,6 +17,7 @@ require_once('translations/en.php');
 require_once('libraries/PHPMailer.php');
 
 // load the login class
+echo 'dirname(__DIR__, 2) = ', dirname(__DIR__, 2);
 require_once('classes/Login.php');
 $login = new Login();
 // ... ask if we are logged in here:
@@ -31,7 +32,7 @@ $phpself = basename(__FILE__);
 $_SERVER['PHP_SELF'] = substr($_SERVER['PHP_SELF'], 0, strpos($_SERVER['PHP_SELF'],
 $phpself)) . $phpself;
 //You've got a clean PHP_SELF again (y) 
-echo 'dirname(__DIR__, 2) = ', dirname(__DIR__, 2);
+
 include($_SERVER['DOCUMENT_ROOT']."/manna-network/members/views/index.php");
 
 } else {
