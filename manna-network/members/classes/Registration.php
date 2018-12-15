@@ -480,10 +480,10 @@ include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
 		// look for promos NOTE PDO Can't do LIMIT 
 	
 
-		if (!defined('READER_CUSTOMERS')) {
+		if (!defined('READER_AGENTS')) {
 		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
 		}
-		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_AGENTS);
 		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
 		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
 		$sql = "SELECT * FROM promo_codes ORDER BY `id` DESC LIMIT 1";
@@ -497,12 +497,12 @@ if($num_promo_codes > 0){
 		$promo_amount = $row['promo_amount']; 
 		}
 
-
-
-
-
-
-
+	if (!defined('READER_CUSTOMERS')) {
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/auth_constants.php");
+		}
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".READER_CUSTOMERS);
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/mysqli_connect.php");
+		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
 
 		//now credit the user locally
 		 if ($this->databaseConnection()) {
