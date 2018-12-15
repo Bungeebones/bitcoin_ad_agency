@@ -21,7 +21,7 @@ if(!array_key_exists("flag", $_GET) OR !isset($_GET['flag']) OR $_GET['flag'] !=
 
 echo "There has been a problem processing your request. We haven't detected your website is registered in YOUR OWN DATABASE? You cannot use this registration form without adding your own website first.? Please follow these directions to add your data from the command line and then try this page again. If you continue to have problems or need further assistance please use the contact form to get tech support. Thank you!
 
-<p>&nbsp;<p><span  style='font-weight:bold;'>Simply Register THIS website/domain (i.e. $url) as your account's FIRST user and FIRST website. In order to accomplish that, you need to send this script a \"flag\" through the url (i.e. the address in the browser window).
+<p>&nbsp;<p><span  style='font-weight:bold;'>Simply Register THIS website/domain (i.e. $url) as your account's FIRST user and FIRST website. 
 <p>&nbsp;<p><span  style='font-weight:bold;'><h3>Clicking the following link will enable you to add the administrative agent website and domain and user info:</h3>
 <p>&nbsp;<p><span  style='font-weight:bold;'><h3><a href='http://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/members/register.php?referer_lnk_num=".$_GET['referer_lnk_num']."&remote_server=".$_GET['remote_server']."&flag=true'>http://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/members/register.php?referer_lnk_num=".$_GET['referer_lnk_num']."&remote_server=".$_GET['remote_server']."&flag=true</a>";
 		     exit();
