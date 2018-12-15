@@ -1,9 +1,7 @@
 <?php
 include('bootstrap_header.php');
 //include($_SERVER['DOCUMENT_ROOT']."/manna-network/members/classes/member_page_class.php");//load order 1
-echo 'dirname(__DIR__, 2) = ', dirname(__DIR__, 2);
-		include(dirname(__DIR__, 2)."/manna-network/members/classes/member_page_class.php");//load order 1
-
+include(dirname(__DIR__, 3)."/manna-network/members/classes/member_page_class.php");//load order 1
 
 $linkInfo = new member_info();
  $LINKinfo = new member_info();
