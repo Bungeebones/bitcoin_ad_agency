@@ -1,4 +1,4 @@
-
+<?php
 //NOTE: the next AGENT_FOLDERNAME setting can be adjusted according to your folder naming preference. Just be sure that you match the name changes you make here to  those you make renaming the bitcoin_ad_agency folder 
 if (!defined('AGENT_FOLDERNAME')) {
 define("AGENT_FOLDERNAME", "bitcoin_ad_agency/manna-network");
@@ -20,8 +20,4 @@ $exchange_pw = "insert your exchange_pw here";//get it from https://manna-networ
 $servername = "localhost";
 $username = "root";//your MySql user name here
 $password = "insert your mysql user's password here";
-
-
-
-
-*/
+?>
