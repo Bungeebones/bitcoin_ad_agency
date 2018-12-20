@@ -3,22 +3,27 @@
 if (!defined('AGENT_FOLDERNAME')) {
 define("AGENT_FOLDERNAME", "bitcoin_ad_agency/manna-network");
 }
-if (!defined('AGENT_URL')) {
-define("AGENT_URL", "insert your site's domain name here");
-}
 
 //IMPORTANT - YOU MUST CONTACT MANNA NETWORK ADMINISTRATION TO GET A VALID AGENT ID! IMPROPER CONFIGURATION CAN RESULT IN LOSS OF YOUR AND YOUR DOWNLINE'S COMMISSIONS AND ENLISTMENT CREDITS! 
 if (!defined('AGENT_ID')) {
-define("AGENT_ID", "insert your agent ID number here");//get it from https://manna-network.cash/admin/agents/register.php
-//define("AGENT_ID", "1");//bad example WRONG  NOTE has quotes 
-//Correct example - define("AGENT_ID", 1);
+define("AGENT_ID", 1);
 }
-//IMPORTANT - YOU MUST CONTACT MANNA NETWORK ADMINISTRATION TO GET A VALID $exchange_pw in order to send and receive updated link, bids and categories!
-$exchange_pw = "insert your exchange_pw here";//get it from https://manna-network.cash/admin/agents/register.php
+if (!defined('AGENT_URL')) {
+define("AGENT_URL", "https://1stwebtrafficbank.com");
+}
+if (!defined('AGENT_REGISTRATION_PAGE')) {
+$agent_registration_page = AGENT_URL."/".AGENT_FOLDERNAME."/members/register.php";
+define('AGENT_REGISTRATION_PAGE',$agent_registration_page);
+}
+if (!defined('AGENT_TECH_SUPPORT_CONTACT_PAGE')) {
+define('AGENT_TECH_SUPPORT_CONTACT_PAGE',"https://1stwebtrafficbank.com/contact.php");
+}
 
-//temporary (i.e. for installation purposes only) root user with full grant capabilities - used for setup only - removing password after installation is fine
+//root user with full grant capabilities - used for setup only - removing password after installation is fine
 $servername = "localhost";
-$username = "root";//your MySql user name here
-$password = "insert your mysql user's password here";
+$username = "root";
+$password = "M1y1s1q1l1***###";
+
+$exchange_pw = "YHv23DJNSrSnJtAd2FICtnbagAcXC97V";
 
 ?>
