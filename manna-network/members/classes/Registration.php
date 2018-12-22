@@ -86,7 +86,9 @@ $recruiter_lnk_num = "";
  if (array_key_exists ( "captcha" , $_POST ) AND isset($_POST["captcha"])) {
 $captcha = $_POST["captcha"];
 } 
-
+ if (array_key_exists ( "flag" , $_POST ) AND isset($_POST["flag"])) {
+$flag = $_POST["flag"];
+} 
 ///////////////  Website Info ////////////////////////
 if (array_key_exists ( "website_title" , $_POST ) AND isset($_POST["website_title"])) {
 $website_title = $_POST["website_title"];
@@ -450,8 +452,8 @@ include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
             $query_update_user->bindValue(':user_id', intval(trim($user_id)), PDO::PARAM_INT);
             $query_update_user->bindValue(':user_activation_hash', $user_activation_hash, PDO::PARAM_STR);
             $query_update_user->execute();
-
-            if ($query_update_user->rowCount() > 0) {
+//I added the if isset flag to prevent the initial configuring submission of the agent's own site to the database from sending anything to the .cash website
+            if ($query_update_user->rowCount() > 0 and !isset($flag)) {
                 $this->verification_successful = true;
                 $this->messages[] = $this->lang['MESSAGE_REGISTRATION_ACTIVATION_SUCCESSFUL'];
 		//Now that the user has verified their email, we retrieve their original info to submit it to the network
