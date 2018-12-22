@@ -3,7 +3,7 @@ include('includes/bootstrap_header.php');
 include('translations/en.php');
 include(dirname( __DIR__, 1 ).'/agent-dir/js/registration.js');
 include(dirname( __DIR__, 1 ).'/agent-dir/translations/en.js'); 
-$lnk_num = 1; 
+
 //verify that the lnk (i.e link) number above is yours to insure your lnk credit and payments
 //change the above text "change_me" to your lnk_number. You should have gotten an email containing it. If you lost it you can retrieve it by logging in at BungeeBones.com/members 
 
