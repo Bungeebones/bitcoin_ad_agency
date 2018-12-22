@@ -175,8 +175,12 @@ $recruiter_lnk_num = "";
 $display_blockmp = '
 
   <div class="box content">
-<form class = "frms" method="POST" action="" name="registerform">
-<input type="hidden" name="recruiter_lnk_num" value="'.$recruiter_lnk_num.'">
+<form class = "frms" method="POST" action="" name="registerform">';
+if(!array_key_exists("flag", $_GET) OR !isset($_GET['flag']) OR $_GET['flag'] !== "true"  ){
+$display_blockmp = '<input type="hidden" name="flag" value="'.$_GET['flag'].'">';
+}
+
+$display_blockmp = '<input type="hidden" name="recruiter_lnk_num" value="'.$recruiter_lnk_num.'">
  <label for="user_name">'.WORDING_REGISTRATION_USERNAME.'</label>
   <input id="user_name" type="text" pattern="[a-zA-Z0-9]{2,64}" name="user_name" style="width: 20em;" required />
    <label for="user_email">'.WORDING_REGISTRATION_EMAIL.'</label>
@@ -344,4 +348,5 @@ echo  $display_blockmp;
 
 include('bootstrap_footer.php');
 ?>
+
 
