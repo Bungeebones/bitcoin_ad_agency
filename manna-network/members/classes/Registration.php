@@ -131,8 +131,14 @@ $this->registerNewUser($user_name, $user_email, $user_password_new, $user_passwo
 
         // if we have such a GET request, call the verifyNewUser() method
         } else if (isset($_GET["id"]) && isset($_GET["verification_code"])) {
-
-            $this->verifyNewUser($_GET["id"], $_GET["verification_code"]);
+ if (array_key_exists ( "flag" , $_GET ) AND isset($_GET["flag"])) {
+$flag = true;
+} 
+else
+{
+$flag = false;
+}
+            $this->verifyNewUser($_GET["id"], $_GET["verification_code"], $flag);
         }
     }
 
@@ -331,13 +337,7 @@ $query_new_user_lnk_insert->bindValue(':wants_tobea_widget', $wants_tobea_widget
                  $query_new_user_lnk_insert->execute();
 
                     // send a verification email
- if (array_key_exists ( "flag" , $_GET ) AND isset($_GET["flag"])) {
-$flag = true;
-} 
-else
-{
-$flag = false;
-}
+
                   if ($this->sendVerificationEmail($user_id, $user_email, $user_activation_hash, $flag)) {
                         // when mail has been send successfully
 echo '$user_activation_hash = ', $user_activation_hash;
