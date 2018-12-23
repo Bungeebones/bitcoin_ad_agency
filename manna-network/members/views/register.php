@@ -176,7 +176,7 @@ $display_blockmp = '
 
   <div class="box content">
 <form class = "frms" method="POST" action="" name="registerform">';
-if(array_key_exists("flag", $_GET) OR isset($_GET['flag']) OR $_GET['flag'] == "true"  ){
+if(array_key_exists("flag", $_GET) OR isset($_GET['flag'])){
 $display_blockmp .= '<input type="hidden" name="flag" value="'.$_GET['flag'].'">';
 }
 
