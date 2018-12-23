@@ -23,5 +23,5 @@ In terminal, move to the installation location/folder of your website and type:
 4) In terminal, move to the installation location/folder of your website and type:
    -> sudo chgrp -R www-data bitcoin_ad_agency
 
-
+<h4>Open the file bitcoin_ad_agency/manna-network-configs/db_cfg/agent_configs.php with a text editor</h4>
 
