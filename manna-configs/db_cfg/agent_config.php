@@ -7,7 +7,7 @@ if (!defined('AGENT_URL')) {
 define("AGENT_URL", "https://insert your site's domain name here");//be SURE to include the http:// or https:// 
 }
 
-//IMPORTANT - YOU MUST CONTACT MANNA NETWORK ADMINISTRATION TO GET A VALID AGENT ID! IMPROPER CONFIGURATION CAN RESULT IN LOSS OF YOUR AND YOUR DOWNLINE'S COMMISSIONS AND ENLISTMENT CREDITS! 
+//IMPORTANT - YOU MUST REGISTER AT THE MANNA NETWORK ADMINISTRATION TO GET A VALID AGENT ID! IMPROPER CONFIGURATION CAN RESULT IN LOSS OF YOUR AND YOUR DOWNLINE'S COMMISSIONS AND ENLISTMENT CREDITS! 
 if (!defined('AGENT_ID')) {
 define("AGENT_ID", "insert your agent ID number here");//get it from https://manna-network.cash/agents/register.php
 //define("AGENT_ID", "1");//bad example WRONG  NOTE has quotes 
