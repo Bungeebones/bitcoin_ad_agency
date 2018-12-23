@@ -6,7 +6,7 @@ An enterprise level platform of the Manna Network ad network designed especially
 
 The Manna network enables web professionals the ability to essentially "gift" their own customers with free advertising and an income earning e-commerce opportunity in one package. It opens up the potential for a mutually-beneficial venture between the customer and the agent to monetize the web traffic and/or the social network of their customer in a win-win arrangement. It fosters a higher level of cooperation between the service provider and the customer resulting in higher customer retention and satisfaction. 
 
-Agency level participants must already be registered as users in the Manna Network system in order to activate their script. If you need a Manna Network account you can find one of our agents to register at here: <a target="_blank" href="http://manna-network.cash/agents/agents_list.php">http://manna-network.cash/agents/agents_list.php</a>
+Agency level participants must already be registered as users in the Manna Network system in order to activate their script. If you need a Manna Network account you can find one of our agents to register at here: <a target="_blank" href="http://manna-network.cash/agents_list.php">http://manna-network.cash/agents_list.php</a>
 
 
 <h3>Installation</h3>
