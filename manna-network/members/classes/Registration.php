@@ -86,9 +86,7 @@ $recruiter_lnk_num = "";
  if (array_key_exists ( "captcha" , $_POST ) AND isset($_POST["captcha"])) {
 $captcha = $_POST["captcha"];
 } 
- if (array_key_exists ( "flag" , $_POST ) AND isset($_POST["flag"])) {
-$flag = $_POST["flag"];
-} 
+
 ///////////////  Website Info ////////////////////////
 if (array_key_exists ( "website_title" , $_POST ) AND isset($_POST["website_title"])) {
 $website_title = $_POST["website_title"];
@@ -442,7 +440,9 @@ header('Location:".$link."');
     {
 
 include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
-
+ if (array_key_exists ( "flag" , $_GET ) AND isset($_GET["flag"])) {
+$flag = $_GET["flag"];
+} 
 
         // if database connection opened
         if ($this->databaseConnection()) {
