@@ -299,7 +299,7 @@ $query_new_user_insert->bindValue(':wants_tobea_widget', intval($wants_tobea_wid
                  $query_new_user_insert->execute();
 
 
-$query_new_user_insert->debugDumpParams();
+//$query_new_user_insert->debugDumpParams();
 
                 // id of new user
                 $user_id = $this->db_connection->lastInsertId();
@@ -340,7 +340,7 @@ echo '$user_activation_hash = ', $user_activation_hash;
                         $this->registration_successful = true;
 
 //widgets table describe - id, url, link_id, wp_domain, is_parked, parent, lft, rgt, time_period, start_clone_date, last_update, end_clone_date, display_freebies 
-  $query_new_user_insert->debugDumpParams();
+ // $query_new_user_insert->debugDumpParams();
 
                 // id of new user
                 $new_customer_link_id = $this->db_connection->lastInsertId();
@@ -463,7 +463,7 @@ include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
 		 $query->bindValue(':user_id', $user_id, PDO::PARAM_INT);
 		 $query->execute();
 		$row = $query->fetch();           
-		$query->debugDumpParams();
+	//	$query->debugDumpParams();
 
 		$link_id = $row['id'];
 		$recruiter_lnk_num = $row['recruiter_lnk_num'];
@@ -517,7 +517,7 @@ if($num_promo_codes > 0){
 				$query_new_user_insert->bindValue(':amount_BCH', '0', PDO::PARAM_STR);
 				$query_new_user_insert->bindValue(':txid', $this_last_title, PDO::PARAM_STR);
 				   $query_new_user_insert->execute();
-		$query_new_user_insert->debugDumpParams();
+		//$query_new_user_insert->debugDumpParams();
 		} //close  db connection
 
 }
