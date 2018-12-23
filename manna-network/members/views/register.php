@@ -194,7 +194,7 @@ $display_blockmp .= '<input type="hidden" name="recruiter_lnk_num" value="'.$rec
     <br>   <label for="website_description">'. WORDING_REGISTRATION_DESCRIPTION.'</label>
      <br>   <textarea  id="website_description" type="text-area"  name="website_description" required  rows="5" cols="40">&nbsp;</textarea>
       <br>   <label for="website_url">'. WORDING_REGISTRATION_URL.'</label>
-      <br>    <input id="website_url" type="text"  name="website_url" value="https://" required /><span style="color:red;">(remove the "s" from "https" if yours is not SSL!)</span>
+      <br>    <input id="website_url" type="text"  name="website_url" value="https://'.$_GET['remote_server'].'" required /><span style="color:red;">(remove the "s" from "https" if yours is not SSL!)</span>
 <hr>';
 
 
