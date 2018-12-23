@@ -14,6 +14,7 @@ echo "<br>Connected successfully";
 $sql="CREATE TABLE `balance` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
+  `customer_id` int(11) NOT NULL,
   `t_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `amount_DMC` decimal(20,10) unsigned zerofill NOT NULL,
   `amount_BCH` decimal(20,10) unsigned zerofill NOT NULL,
