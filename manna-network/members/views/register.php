@@ -123,7 +123,7 @@ $recruiter_lnk_num=  $_GET['referer_lnk_num']; //NOTE THE NAME CHANGE!!!!!
 }
 else
 {
-$recruiter_lnk_num = "";
+$recruiter_lnk_num = "1";
 }
 
 /*
