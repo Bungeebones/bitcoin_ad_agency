@@ -251,7 +251,7 @@ include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".$PREFIX[0]."_writer_custome
             $query_check_user_name->bindValue(':user_email', $user_email, PDO::PARAM_STR);
             $query_check_user_name->execute();
             $result = $query_check_user_name->fetchAll();
-$query_check_user_name->debugDumpParams();
+//$query_check_user_name->debugDumpParams();
             // if username or/and email find in the database
             if (count($result) > 0) {
                 for ($i = 0; $i < count($result); $i++) {
