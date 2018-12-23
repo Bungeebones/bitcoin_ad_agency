@@ -20,5 +20,5 @@ $exchange_pw = "insert your exchange_pw here";//get it from https://manna-networ
 $servername = "localhost";
 $username = "root";//your MySql user name here
 $password = "insert your mysql user's password here";
-$lnk_num = 1; //this would be your permanent link number for your agent url. It is different than the link_num you already have (or should have) in the manna Network system
-?>
+
+$lnk_num = 1;//DO NOT CHANGE! This is a local link number only (not the same as your original one at Manna Network). You will be prompted at click the Add URL at the top of the agent-dir/index.php and add your link info as your own first link in your own web directory and will receive the local link number of 1?>
