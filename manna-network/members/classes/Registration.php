@@ -331,7 +331,14 @@ $query_new_user_lnk_insert->bindValue(':wants_tobea_widget', $wants_tobea_widget
                  $query_new_user_lnk_insert->execute();
 
                     // send a verification email
-                  if ($this->sendVerificationEmail($user_id, $user_email, $user_activation_hash)) {
+ if (array_key_exists ( "flag" , $_GET ) AND isset($_GET["flag"])) {
+$flag = true;
+} 
+else
+{
+$flag = false;
+}
+                  if ($this->sendVerificationEmail($user_id, $user_email, $user_activation_hash, $flag)) {
                         // when mail has been send successfully
 echo '$user_activation_hash = ', $user_activation_hash;
                         $this->messages[] = $this->lang['MESSAGE_VERIFICATION_MAIL_SENT'];
@@ -436,13 +443,11 @@ header('Location:".$link."');
 
 
 
-    public function verifyNewUser($user_id, $user_activation_hash)
+    public function verifyNewUser($user_id, $user_activation_hash, $flag)
     {
 
 include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
- if (array_key_exists ( "flag" , $_GET ) AND isset($_GET["flag"])) {
-$flag = $_GET["flag"];
-} 
+
 
         // if database connection opened
         if ($this->databaseConnection()) {
@@ -453,7 +458,7 @@ $flag = $_GET["flag"];
             $query_update_user->bindValue(':user_activation_hash', $user_activation_hash, PDO::PARAM_STR);
             $query_update_user->execute();
 //I added the if isset flag to prevent the initial configuring submission of the agent's own site to the database from sending anything to the .cash website
-            if ($query_update_user->rowCount() > 0 and !isset($flag)) {
+            if ($query_update_user->rowCount() > 0 and $flag!==true) {
                 $this->verification_successful = true;
                 $this->messages[] = $this->lang['MESSAGE_REGISTRATION_ACTIVATION_SUCCESSFUL'];
 		//Now that the user has verified their email, we retrieve their original info to submit it to the network
