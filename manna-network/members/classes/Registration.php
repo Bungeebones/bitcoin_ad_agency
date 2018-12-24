@@ -464,7 +464,8 @@ include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
             $query_update_user->bindValue(':user_activation_hash', $user_activation_hash, PDO::PARAM_STR);
             $query_update_user->execute();
 //I added the if isset flag to prevent the initial configuring submission of the agent's own site to the database from sending anything to the .cash website
-            if ($query_update_user->rowCount() > 0 and $flag!==true) {
+            if ($query_update_user->rowCount() > 0) {
+		if($flag!==true){
                 $this->verification_successful = true;
                 $this->messages[] = $this->lang['MESSAGE_REGISTRATION_ACTIVATION_SUCCESSFUL'];
 		//Now that the user has verified their email, we retrieve their original info to submit it to the network
@@ -501,8 +502,8 @@ include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
 		include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
 		$sql = "SELECT * FROM promo_codes ORDER BY `id` DESC LIMIT 1";
 		$result = mysqli_query($mysqli, $sql) or die("Couldn't execute 'Edit 16 Account' query");
-$num_promo_codes = mysqli_num_rows($result);
-if($num_promo_codes > 0){
+		$num_promo_codes = mysqli_num_rows($result);
+		if($num_promo_codes > 0){
 		while($row = mysqli_fetch_array($result)){
 		$this_last_title = $row['promo_title'];
 		$promo_description = $row['promo_description']; 
@@ -519,7 +520,7 @@ if($num_promo_codes > 0){
 
 		//now credit the user locally
 		 if ($this->databaseConnection()) {
-		echo '<h1>IN if ($this->databaseConnection </h1>';
+		
 		$query_new_user_insert = $this->db_connection->prepare('INSERT INTO balance (user_id, customer_id, amount_DMC, amount_BCH, txid) VALUES(:user_id, :customer_id, :amount_DMC, :amount_BCH, :txid);');
 				                                                        
 		      $query_new_user_insert->bindValue(':user_id', $user_id, PDO::PARAM_INT);
@@ -528,14 +529,14 @@ if($num_promo_codes > 0){
 				$query_new_user_insert->bindValue(':amount_BCH', '0', PDO::PARAM_STR);
 				$query_new_user_insert->bindValue(':txid', $this_last_title, PDO::PARAM_STR);
 				   $query_new_user_insert->execute();
-		//$query_new_user_insert->debugDumpParams();
-		} //close  db connection
+				//$query_new_user_insert->debugDumpParams();
+			} //close  db connection
 
-}
-else
-{
-$promo_amount = 0;
-}
+		}
+		else
+		{
+		$promo_amount = 0;
+		}
 
 		//now send user registration to central 
 		$file="http://manna-network.cash/incoming/register.php";
@@ -566,6 +567,14 @@ $promo_amount = 0;
 		$data = curl_exec($ch);
 		curl_close($ch);
 		echo($data);
+                  }//close if no flag
+			else
+			{
+			//Leave a brief message to the new agent
+			echo '<h1>Your own link information was successfully added to your own database</h1>';
+echo '<p>Now your website is configured as an "agency" site in the network with your own agent ID and the #1 link id (within your own web directory). The two together provide your website a unique id in the manna network to credit you with all the users that register through your web directory and through their websites (if they, too, install our scripts)</p>';
+echo '<br>nbsp;<hr><p>You can now offer this web directory page to your website visotors and offer them FREE advertising and the opportunity to earn Bitcoin SV. Make a link to the directory page. Let your site visitors enjoy it as a feature of your site, offer free advertising to your friends and associates. promote it as much as you like!</p>';
+			}
 		}//close if ($query_update_user->rowCount() > 0)
 else
 {
