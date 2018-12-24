@@ -39,7 +39,7 @@ else
        return $id;
 }
 }
-
+include('bootstrap_header.php'); 
 if ($registration->errors) {
     foreach ($registration->errors as $error) {
         echo "<h2>".$error."</h2>";
