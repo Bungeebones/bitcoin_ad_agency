@@ -21,6 +21,7 @@ $servername = "localhost";
 $username = "root";//your MySql user name here
 $password = "insert your mysql user's password here";
 
-$lnk_num = 1;//DO NOT CHANGE! This is a local link number only (not the same as your original one at Manna Network). You will be prompted at click the Add URL at the top of the agent-dir/index.php and add your link info as your own first link in your own web directory and will receive the local link number of 1?>
+$lnk_num = 1;//DO NOT CHANGE! This is a local link number only (not the same as your original one at Manna Network). You will be prompted at click the Add URL at the top of the agent-dir/index.php and add your link info as your own first link in your own web directory and will receive the local link number of 1
 
 //AFTER you have correctly configured the above settings, proceed to bitcoin_ad_agency/manna-network/admin/install/index.php
+?>
