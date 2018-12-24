@@ -573,7 +573,11 @@ include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
 			//Leave a brief message to the new agent
 			echo '<h1>Your own link information was successfully added to your own database</h1>';
 echo '<p>Now your website is configured as an "agency" site in the network with your own agent ID and the #1 link id (within your own web directory). The two together provide your website a unique id in the manna network to credit you with all the users that register through your web directory and through their websites (if they, too, install our scripts)</p>';
-echo '<br>nbsp;<hr><p>You can now offer this web directory page to your website visotors and offer them FREE advertising and the opportunity to earn Bitcoin SV. Make a link to the directory page. Let your site visitors enjoy it as a feature of your site, offer free advertising to your friends and associates. promote it as much as you like!</p>';
+echo '<br>nbsp;<hr><p>You can now offer this web directory page to your website visotors and offer them FREE advertising and the opportunity to earn Bitcoin SV. Make a link to the directory page. Let your site visitors enjoy it as a feature of your site, offer free advertising to your friends and associates. promote it as much as you like!</p>
+<h3>The url you want to send them to is the <a href="../../agent-dir">agent-dir/index.php page</a>.</h3>
+<h4>Use the above link to add more websites if you wish and they will be submitted to the manna Network for inclusion and distribution to the other agent and members sites as well<h4>';
+';
+
 			}
 		}//close if ($query_update_user->rowCount() > 0)
 else
