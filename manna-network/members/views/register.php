@@ -183,6 +183,8 @@ if(array_key_exists("flag", $_GET) OR isset($_GET['flag'])){
 $display_blockmp .= '<input type="hidden" name="flag" value="'.$_GET['flag'].'">';
 }
 
+
+
 $display_blockmp .= '<input type="hidden" name="recruiter_lnk_num" value="'.$recruiter_lnk_num.'">
  <label for="user_name">'.WORDING_REGISTRATION_USERNAME.'</label>
   <input id="user_name" type="text" pattern="[a-zA-Z0-9]{2,64}" name="user_name" style="width: 20em;" required />
@@ -197,7 +199,7 @@ $display_blockmp .= '<input type="hidden" name="recruiter_lnk_num" value="'.$rec
     <br>   <label for="website_description">'. WORDING_REGISTRATION_DESCRIPTION.'</label>
      <br>   <textarea  id="website_description" type="text-area"  name="website_description" required  rows="5" cols="40">&nbsp;</textarea>
       <br>   <label for="website_url">'. WORDING_REGISTRATION_URL.'</label>
-      <br>    <input id="website_url" type="text"  name="website_url" value="https://'.$_GET['remote_server'].'" required /><span style="color:red;">(remove the "s" from "https" if yours is not SSL!)</span>
+      <br>    <input id="website_url" type="text"  name="website_url" value="https://Insert Your URL HERE" required /><span style="color:red;">(remove the "s" from "https" if yours is not SSL!)</span>
 <hr>';
 
 
