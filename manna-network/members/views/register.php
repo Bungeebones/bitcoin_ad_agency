@@ -30,11 +30,14 @@ echo "There has been a problem processing your request. We haven't detected your
 	echo '<h1>You are about to make a ONE-TIME configuration of what will be your adminstrative account, thus making this domain (i.e. '. $url. ') the "agency" website. Be sure the information is accurate and there are no "typos"</h1>';
 			    
 	}
-}        
+}  
+else
+{      
  	while($row = mysqli_fetch_array($result)){
 		$id = $row['id']; 
 		}
        return $id;
+}
 }
 
 if ($registration->errors) {
