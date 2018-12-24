@@ -23,7 +23,7 @@ echo "There has been a problem processing your request. We haven't detected your
 
 <p>&nbsp;<p><span  style='font-weight:bold;'>Simply Register THIS website/domain (i.e. $url) as your account's FIRST user and FIRST website. 
 <p>&nbsp;<p><span  style='font-weight:bold;'><h3>Clicking the following link will enable you to add the administrative agent website and domain and user info:</h3>
-<p>&nbsp;<p><span  style='font-weight:bold;'><h3><a href='http://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/members/register.php?referer_lnk_num=".$_GET['referer_lnk_num']."&remote_server=".$_GET['remote_server']."&flag=true'>http://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/members/register.php?referer_lnk_num=".$_GET['referer_lnk_num']."&remote_server=".$_GET['remote_server']."&flag=true</a>";
+<p>&nbsp;<p><span  style='font-weight:bold;'><h3><a href='http://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/members/register.php?referer_lnk_num=0&remote_server=".$_SERVER['HTTP_HOST']."&flag=true'>http://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/members/register.php?referer_lnk_num=".$_GET['referer_lnk_num']."&remote_server=".$_GET['remote_server']."&flag=true</a>";
 		     exit();
 	}
 	elseif(array_key_exists("flag", $_GET) AND isset($_GET['flag']) AND $_GET['flag'] == "true"  ){ 
