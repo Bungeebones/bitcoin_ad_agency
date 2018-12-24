@@ -103,7 +103,13 @@ $website_url = (strlen($website_url) > 59) ? substr($website_url,0,55).'...' : $
 if (array_key_exists ( "category_id" , $_POST ) AND isset($_POST["category_id"])) {
 $category_id = $_POST["category_id"];
 }
-
+if (array_key_exists ( "flag" , $_POST ) AND isset($_POST["flag"])) {
+$flag = true;
+}
+else
+{
+$flag = false;
+}
 if (array_key_exists ( "newcatsuggestion" , $_POST ) AND isset($_POST["newcatsuggestion"])) {
 $newcatsuggestion = $_POST["newcatsuggestion"];
 $newcatsuggestion = (strlen($newcatsuggestion) > 49) ? substr($newcatsuggestion,0,45).'...' : $newcatsuggestion;
@@ -126,7 +132,7 @@ $wants_tobea_widget = $_POST["wants_tobea_widget"];
 $wants_tobea_widget = 0;
 }
 
-$this->registerNewUser($user_name, $user_email, $user_password_new, $user_password_repeat, $captcha, $recruiter_lnk_num, $website_title, $website_description, $website_url, $category_id, $newcatsuggestion, $location_id, $website_street, $website_district, $wants_tobea_widget);  
+$this->registerNewUser($user_name, $user_email, $user_password_new, $user_password_repeat, $captcha, $recruiter_lnk_num, $website_title, $website_description, $website_url, $category_id, $newcatsuggestion, $location_id, $website_street, $website_district, $wants_tobea_widget, $flag);  
 
 
         // if we have such a GET request, call the verifyNewUser() method
@@ -211,7 +217,7 @@ include(dirname(__DIR__, 3)."/manna-configs/db_cfg/".$PREFIX[0]."_writer_custome
      * handles the entire registration process. checks all error possibilities, and creates a new user in the database if
      * everything is fine
      */
-    private function registerNewUser($user_name, $user_email, $user_password, $user_password_repeat, $captcha, $recruiter_lnk_num, $website_title, $website_description, $website_url, $category_id, $newcatsuggestion, $location_id, $website_street, $website_district, $wants_tobea_widget)
+    private function registerNewUser($user_name, $user_email, $user_password, $user_password_repeat, $captcha, $recruiter_lnk_num, $website_title, $website_description, $website_url, $category_id, $newcatsuggestion, $location_id, $website_street, $website_district, $wants_tobea_widget, $flag)
     {
 
 
@@ -377,7 +383,7 @@ echo '<h1>Last Insert ID = ', $new_customer_link_id;
      * sends an email to the provided email address
      * @return boolean gives back true if mail has been sent, gives back false if no mail could been sent
      */
-    public function sendVerificationEmail($user_id, $user_email, $user_activation_hash)
+    public function sendVerificationEmail($user_id, $user_email, $user_activation_hash, $flag)
     {
 
 
@@ -415,7 +421,7 @@ echo '<h1>Last Insert ID = ', $new_customer_link_id;
 echo '<br line 408 testPHP_SELF';
 
 
-  $link = "https://".$_SERVER['PHP_SELF']."/manna-network/members/register.php".'?id='.urlencode($user_id).'&verification_code='.urlencode($user_activation_hash);
+  $link = "https://".$_SERVER['PHP_SELF']."/manna-network/members/register.php".'?id='.urlencode($user_id).'&verification_code='.urlencode($user_activation_hash).'&flag='.$flag;
 
 echo 'line 409 registration.php EMAIL_VERIFICATION_URL link = ', $link;
 
