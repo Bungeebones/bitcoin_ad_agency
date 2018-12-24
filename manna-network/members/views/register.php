@@ -17,16 +17,16 @@ $query = "SELECT id, website_url FROM `customer_links` where `website_url` LIKE 
 $result = mysqli_query($mysqli, $query);
              if (mysqli_num_rows($result)<1){  
 
-if(!array_key_exists("flag", $_GET) OR !isset($_GET['flag']) OR $_GET['flag'] !== "true"  ){ 
+if(!array_key_exists("flag", $_GET) OR !isset($_GET['flag']) OR $_GET['flag'] !== "1"  ){ 
 
 echo "There has been a problem processing your request. We haven't detected your website is registered in YOUR OWN DATABASE? You cannot use this registration form without adding your own website first.? Please follow these directions to add your data from the command line and then try this page again. If you continue to have problems or need further assistance please use the contact form to get tech support. Thank you!
 
 <p>&nbsp;<p><span  style='font-weight:bold;'>Simply Register THIS website/domain (i.e. $url) as your account's FIRST user and FIRST website. 
 <p>&nbsp;<p><span  style='font-weight:bold;'><h3>Clicking the following link will enable you to add the administrative agent website and domain and user info:</h3>
-<p>&nbsp;<p><span  style='font-weight:bold;'><h3><a href='http://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/members/register.php?referer_lnk_num=0&remote_server=".$_SERVER['HTTP_HOST']."&flag=true'>http://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/members/register.php?referer_lnk_num=".$_GET['referer_lnk_num']."&remote_server=".$_GET['remote_server']."&flag=true</a>";
+<p>&nbsp;<p><span  style='font-weight:bold;'><h3><a href='http://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/members/register.php?referer_lnk_num=0&remote_server=".$_SERVER['HTTP_HOST']."&flag=1'>http://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/members/register.php?referer_lnk_num=0&remote_server=".$_GET['remote_server']."&flag=1</a>";
 		     exit();
 	}
-	elseif(array_key_exists("flag", $_GET) AND isset($_GET['flag']) AND $_GET['flag'] == "true"  ){ 
+	elseif(array_key_exists("flag", $_GET) AND isset($_GET['flag']) AND $_GET['flag'] == "1"  ){ 
 	echo '<h1>You are about to make a ONE-TIME configuration of what will be your adminstrative account, thus making this domain (i.e. '. $url. ') the "agency" website. Be sure the information is accurate and there are no "typos"</h1>';
 			    
 	}
@@ -318,7 +318,7 @@ $display_blockmp .='
       <label for="website_district">'. WORDING_REGISTRATION_DISTRICT.'</label>
         <input id="website_district" type="text"  name="website_district" style="width: 350px;"/></div>';
 
-if(!array_key_exists("flag", $_GET) OR !isset($_GET['flag']) OR $_GET['flag'] !== "true"  ){
+if(!array_key_exists("flag", $_GET) OR !isset($_GET['flag']) OR $_GET['flag'] !== "1"  ){
 $display_blockmp .= ' <h1>'.WORDING_REGISTRATION_RECIPROCAL_HEADER.'<input type="checkbox" name="wants_tobea_widget" value="1">'.
 WORDING_REGISTRATION_RECIPROCAL.'
      <div style="width:600px; margin:auto; background-color: #f2f2f2; color: #666666; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px;">
