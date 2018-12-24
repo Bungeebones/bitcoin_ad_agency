@@ -585,9 +585,11 @@ echo '<br>nbsp;<hr><p>You can now offer this web directory page to your website 
 		{
 		echo '<h1 style="color:red; text-align:center;">Registration Failed!<br> Please Contact Administration. <br> Sorry for the inconvenience.</h1>';
 		}
-echo '<h3 style="color:red; text-align:center;">Your registration and web site information was successfully placed in the Manna Network queue for administrative review. Please allow 24-48 hours for this process and for your website listing to appear in the manna network member\'s websites.</h3>
-<h3 style="color:red; text-align:center;">The link approval process does hinder your ability to correctly install any of our Bitcoin-earning scripts. If you are eager to get started earning Bitcoin with your website, use the contact form at Manna-Network.com and request a quick review from the administrators. They are glad to receive the feedback and can likely get the approval through faster.</h3>';
-            } else {
+		if($flag != 1){
+			echo '<h3 style="color:red; text-align:center;">Your registration and web site information was successfully placed in the Manna Network queue for administrative review. Please allow 24-48 hours for this process and for your website listing to appear in the manna network member\'s websites.</h3>
+				<h3 style="color:red; text-align:center;">The link approval process does hinder your ability to correctly install any of our Bitcoin-earning scripts. If you are eager to get started earning Bitcoin with your website, use the contact form at Manna-Network.com and request a quick review from the administrators. They are glad to receive the feedback and can likely get the approval through faster.</h3>';
+		   }
+		} else {
                 $this->errors[] = $this->lang['MESSAGE_REGISTRATION_ACTIVATION_NOT_SUCCESSFUL'];
 
             }
