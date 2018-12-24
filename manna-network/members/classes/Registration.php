@@ -104,11 +104,11 @@ if (array_key_exists ( "category_id" , $_POST ) AND isset($_POST["category_id"])
 $category_id = $_POST["category_id"];
 }
 if (array_key_exists ( "flag" , $_POST ) AND isset($_POST["flag"])) {
-$flag = true;
+$flag = 1;
 }
 else
 {
-$flag = false;
+$flag = 0;
 }
 if (array_key_exists ( "newcatsuggestion" , $_POST ) AND isset($_POST["newcatsuggestion"])) {
 $newcatsuggestion = $_POST["newcatsuggestion"];
@@ -138,12 +138,9 @@ $this->registerNewUser($user_name, $user_email, $user_password_new, $user_passwo
         // if we have such a GET request, call the verifyNewUser() method
         } else if (isset($_GET["id"]) && isset($_GET["verification_code"])) {
  if (array_key_exists ( "flag" , $_GET ) AND isset($_GET["flag"])) {
-$flag = true;
+$flag = $_GET["flag"];
 } 
-else
-{
-$flag = false;
-}
+
             $this->verifyNewUser($_GET["id"], $_GET["verification_code"], $flag);
         }
     }
@@ -292,7 +289,8 @@ $query_new_user_insert = $this->db_connection->prepare('INSERT INTO users (user_
                 $query_new_user_insert->bindValue(':user_registration_ip', $_SERVER['REMOTE_ADDR'], PDO::PARAM_STR);
                 $query_new_user_insert->bindValue(':recruiter_lnk_num', $recruiter_lnk_num, PDO::PARAM_INT);
                
-$user_registration_datetime = mktime(0, 0, 0, date("m")  , date("d"), date("Y"));
+//$user_registration_datetime = mktime(0, 0, 0, date("m")  , date("d"), date("Y"));
+$user_registration_datetime = time();
  $query_new_user_insert->bindValue(':user_registration_datetime', $user_registration_datetime, PDO::PARAM_STR);
 
  $query_new_user_insert->bindValue(':website_title', $website_title, PDO::PARAM_STR);
@@ -418,7 +416,6 @@ echo '<h1>Last Insert ID = ', $new_customer_link_id;
         $mail->Subject = EMAIL_VERIFICATION_SUBJECT;
 */
    //     $link = EMAIL_VERIFICATION_URL.'?id='.urlencode($user_id).'&verification_code='.urlencode($user_activation_hash);
-echo '<br line 408 testPHP_SELF';
 
 
   $link = "https://".$_SERVER['PHP_SELF']."/manna-network/members/register.php".'?id='.urlencode($user_id).'&verification_code='.urlencode($user_activation_hash).'&flag='.$flag;
@@ -451,7 +448,7 @@ header('Location:".$link."');
 
     public function verifyNewUser($user_id, $user_activation_hash, $flag)
     {
-
+echo '<br>In the verify new user func and flag = ', $flag;
 include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
 
 
@@ -465,7 +462,7 @@ include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
             $query_update_user->execute();
 //I added the if isset flag to prevent the initial configuring submission of the agent's own site to the database from sending anything to the .cash website
             if ($query_update_user->rowCount() > 0) {
-		if($flag!==true){
+		if($flag != 1){
                 $this->verification_successful = true;
                 $this->messages[] = $this->lang['MESSAGE_REGISTRATION_ACTIVATION_SUCCESSFUL'];
 		//Now that the user has verified their email, we retrieve their original info to submit it to the network
@@ -567,24 +564,29 @@ include(dirname(__DIR__, 3)."/manna-configs/db_cfg/agent_config.php");
 		$data = curl_exec($ch);
 		curl_close($ch);
 		echo($data);
-                  }//close if no flag
+
+
+
+                  }//close if flag !=
 			else
 			{
 			//Leave a brief message to the new agent
 			echo '<h1>Your own link information was successfully added to your own database</h1>';
 echo '<p>Now your website is configured as an "agency" site in the network with your own agent ID and the #1 link id (within your own web directory). The two together provide your website a unique id in the manna network to credit you with all the users that register through your web directory and through their websites (if they, too, install our scripts)</p>';
 echo '<br>nbsp;<hr><p>You can now offer this web directory page to your website visotors and offer them FREE advertising and the opportunity to earn Bitcoin SV. Make a link to the directory page. Let your site visitors enjoy it as a feature of your site, offer free advertising to your friends and associates. promote it as much as you like!</p>
-<h3>The url you want to send them to is the <a href="../../agent-dir">agent-dir/index.php page</a>.</h3>
+<h3>The url you want to send them to is the <a href="../../../../../agent-dir/index.php">agent-dir/index.php page</a>.</h3>
 <h4>Use the above link to add more websites if you wish and they will be submitted to the manna Network for inclusion and distribution to the other agent and members sites as well<h4>';
 
 
 			}
-		}//close if ($query_update_user->rowCount() > 0)
-else
-{
-echo '<h1 style="color:red; text-align:center;">Registration Failed!<br> Please Contact Administration. <br> Sorry for the inconvenience.</h1>';
-}
 
+		}//close if ($query_update_user->rowCount() > 0)
+		else
+		{
+		echo '<h1 style="color:red; text-align:center;">Registration Failed!<br> Please Contact Administration. <br> Sorry for the inconvenience.</h1>';
+		}
+echo '<h3 style="color:red; text-align:center;">Your registration and web site information was successfully placed in the Manna Network queue for administrative review. Please allow 24-48 hours for this process and for your website listing to appear in the manna network member\'s websites.</h3>
+<h3 style="color:red; text-align:center;">The link approval process does hinder your ability to correctly install any of our Bitcoin-earning scripts. If you are eager to get started earning Bitcoin with your website, use the contact form at Manna-Network.com and request a quick review from the administrators. They are glad to receive the feedback and can likely get the approval through faster.</h3>';
             } else {
                 $this->errors[] = $this->lang['MESSAGE_REGISTRATION_ACTIVATION_NOT_SUCCESSFUL'];
 
