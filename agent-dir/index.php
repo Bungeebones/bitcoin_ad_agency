@@ -107,7 +107,7 @@ $url1 = $insecure_url."/".$lead_folder."/mannanetwork-dir/get_category_json.php"
 // Set the url
 curl_setopt($handle, CURLOPT_URL, $url1);
 curl_setopt($handle, CURLOPT_POSTFIELDS,$args);
- curl_setopt(curl, CURLOPT_SSL_VERIFYPEER, false);
+ curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, false);
 // Set the result output to be a string.
 curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
  $jsoncatList = curl_exec($handle);
@@ -168,7 +168,7 @@ $url1 = $insecure_url."/".$lead_folder."/mannanetwork-dir/get_category_json.php"
 curl_setopt($handle, CURLOPT_URL, $url1);
 curl_setopt($handle, CURLOPT_POSTFIELDS,$args2); //use same args as other queries
 // Set the result output to be a string.
- curl_setopt(curl, CURLOPT_SSL_VERIFYPEER, false);
+ curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
  $jsonregionList = curl_exec($handle);
  curl_close($handle);
@@ -216,7 +216,7 @@ $url2 = $insecure_url."/".$lead_folder."/mannanetwork-dir/get_links_json.php";
 
 curl_setopt($handle, CURLOPT_URL, $url2);
 curl_setopt($handle, CURLOPT_POSTFIELDS,$args2);
- curl_setopt(curl, CURLOPT_SSL_VERIFYPEER, false);
+ curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, false);
 // Set the result output to be a string.
 curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
  $jsonlinksList = curl_exec($handle);
