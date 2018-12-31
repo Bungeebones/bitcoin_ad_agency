@@ -47,7 +47,6 @@ $query = "SELECT $agent_column_names[$key] FROM `$value` ORDER BY id DESC LIMIT 
 		$got  = $row[$agent_column_names[$key]]; 
 			}
       if(mysqli_num_rows($result)>0){
-	$agent_array_label = $agent_array_labels[$key];
 	$send_array_agents[$key] = $got;
 	}
 	else
