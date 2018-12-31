@@ -52,4 +52,9 @@ Complete data (sql) file (updated daily) <a target="_blank" href="fill_db/get_la
 <h3><u>Step 4</u></h3>
 <br>
 <p>After you have copied or moved that downloaded file into the manna-network/admin/install/fill_db/manna_daily folder and unzipped it, click this link <br><a target="_blank" href="fill_db/insert_table_data.php">insert_table_data.php</a> (located in that folder) <br>and it will insert the uploaded file's data into the proper tables.
+<br>
+<br>
+<h3><u>Step 5</u></h3>
+<br>
+<p>After you have inserted the latest data files, click this link <br><a target="_blank" href="../network-sync.php">network-sync.php</a> <br>and it will run a script to sync the data you inserted with the Manna Network  server to enable it to update your tables with daily entries and purchase and rankings.
 
