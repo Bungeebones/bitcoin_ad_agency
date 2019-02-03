@@ -3,6 +3,9 @@
 if (!defined('AGENT_FOLDERNAME')) {
 define("AGENT_FOLDERNAME", "bitcoin_ad_agency/manna-network");
 }
+if (!defined('AGENT_NETWORK_FOLDERNAME')) {
+define("AGENT_NETWORK_FOLDERNAME", "bitcoin_ad_agency/manna-network");
+}
 if (!defined('AGENT_URL')) {
 define("AGENT_URL", "https://insert your site's domain name here");//be SURE to include the http:// or https:// 
 }
