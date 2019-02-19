@@ -164,7 +164,7 @@ $args2 = array('regional_num' => $regional_num,'link_record_num' => $link_record
 $handle = curl_init();
 
 
-$url1 = $curl_security.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_category_json.php";
+$url1 = $curl_security.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_regions_json.php";
 
 // Set the url
 curl_setopt($handle, CURLOPT_URL, $url1);
