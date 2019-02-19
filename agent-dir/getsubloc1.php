@@ -30,7 +30,7 @@ if(isset($lnk_num)){$args['lnk_num']=  $lnk_num;}
 $args['http_host']=   $_SERVER['HTTP_HOST'];
 
 $handle = curl_init();
-$url = $curl_security."/".AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_regions_json.php";
+$url = $curl_security.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_regions_json.php";
 // Set the url
 curl_setopt($handle, CURLOPT_URL, $url);
 curl_setopt($handle, CURLOPT_POSTFIELDS,$args);
