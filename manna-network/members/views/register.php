@@ -1,4 +1,7 @@
   <?php
+//dev notes: I couldn't get curl to work with the dvelopment server's SSL so have to run it as http on dev server. The var below is used to switch out of that functionality if curl is working with SSL
+$curl_security = "http://";//Add an "s" to make curl use SSL
+
 function getChangeMeStatus($url){
 
 if (!defined('AGENT_FOLDERNAME')) {
@@ -18,12 +21,13 @@ $result = mysqli_query($mysqli, $query);
              if (mysqli_num_rows($result)<1){  
 
 if(!array_key_exists("flag", $_GET) OR !isset($_GET['flag']) OR $_GET['flag'] !== "1"  ){ 
+//$url1 = $curl_security.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_category_json.php";
 
 echo "There has been a problem processing your request. We haven't detected your website is registered in YOUR OWN DATABASE? You cannot use this registration form without adding your own website first.? Please follow these directions to add your data from the command line and then try this page again. If you continue to have problems or need further assistance please use the contact form to get tech support. Thank you!
 
 <p>&nbsp;<p><span  style='font-weight:bold;'>Simply Register THIS website/domain (i.e. $url) as your account's FIRST user and FIRST website. 
 <p>&nbsp;<p><span  style='font-weight:bold;'><h3>Clicking the following link will enable you to add the administrative agent website and domain and user info:</h3>
-<p>&nbsp;<p><span  style='font-weight:bold;'><h3><a href='http://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/members/register.php?referer_lnk_num=0&remote_server=".$_SERVER['HTTP_HOST']."&flag=1'>http://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/members/register.php?referer_lnk_num=0&remote_server=".$_GET['remote_server']."&flag=1</a>";
+<p>&nbsp;<p><span  style='font-weight:bold;'><h3><a href='https://".AGENT_URL."/".AGENT_FOLDERNAME."/manna-network/members/register.php?referer_lnk_num=0&remote_server=".$_SERVER['HTTP_HOST']."&flag=1'>https://".$_SERVER['HTTP_HOST']."/".AGENT_FOLDERNAME."/manna-network/members/register.php?referer_lnk_num=0&remote_server=".$_GET['remote_server']."&flag=1</a>";
 		     exit();
 	}
 	elseif(array_key_exists("flag", $_GET) AND isset($_GET['flag']) AND $_GET['flag'] == "1"  ){ 
@@ -353,5 +357,4 @@ echo  $display_blockmp;
 
 include('bootstrap_footer.php');
 ?>
-
 
