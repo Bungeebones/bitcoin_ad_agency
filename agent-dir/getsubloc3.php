@@ -65,15 +65,3 @@ $menu_str .= '</select><br>
 echo $menu_str;
 
 ?>
-	else
-	{
-	$menu_str .= "<option value='n:" . $regionList[$key]['id']  .":".$regionList[$key]['name'] . "'>".$regionList[$key]['name']."</option>";
-	}
-}
-
-$menu_str .= '</select><br>
-
-</form>';
-echo $menu_str;
-
-?>
