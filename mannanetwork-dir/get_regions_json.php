@@ -3,8 +3,7 @@
 include(dirname( __FILE__, 2 ). "/manna-configs/db_cfg/auth_constants.php");
 include(dirname( __FILE__, 2 ). "/manna-configs/db_cfg/".READER_AGENTS);
 include(dirname( __FILE__, 2 ). "/manna-configs/db_cfg/mysqli_connect.php");
-
-require('functions/functions.php');
+require(dirname( __FILE__, 1 ). "/functions/functions.php");
  
 if (array_key_exists("affiliate_num",$_POST))
   {
@@ -47,6 +46,49 @@ if (array_key_exists("link_page_id",$_POST))
   {
 $link_page_id  = $_POST['link_page_id'];
   }
+else
+  {
+  $link_page_id  = "";
+  }
+if (array_key_exists("pagem_url_cat",$_POST))
+  {
+$pagem_url_cat  = $_POST['pagem_url_cat'];
+  }
+else
+  {
+  $pagem_url_cat  = "";
+  }
+if (array_key_exists("link_page_total",$_POST))
+  {
+$link_page_total  = $_POST['link_page_total'];
+  }
+else
+  {
+  $link_page_total  = "";
+  }
+if (array_key_exists("link_record_num",$_POST))
+  {
+$link_record_num  = $_POST['link_record_num'];
+  }
+else
+  {
+  $link_record_num  = "";
+  }
+if (array_key_exists("regional_num",$_POST))
+  {
+$regional_num  = $_POST['regional_num'];
+  }
+
+if(isset($regional_num) && $regional_num > 0 && $regional_num !=""){
+
+$regionList = getRegions($regional_num);
+echo json_encode($regionList);
+}
+else
+{
+echo "NO Regional Entries";
+}
+?>
 else
   {
   $link_page_id  = "";
