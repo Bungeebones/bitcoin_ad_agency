@@ -1,4 +1,6 @@
 <?php
+//dev notes: I couldn't get curl to work with the dvelopment server's SSL so have to run it as http on dev server. The var below is used to switch out of that functionality if curl is working with SSL
+$curl_security = "http://";//Add an "s" to make curl use SSL
 
 $locus_array = "";
 $link_record_num = "";
@@ -10,7 +12,8 @@ $cat_page_num = "";
 $category_id = ""; 
 $lnk_num = "";
 
-include('agent_config.php');
+      include(dirname( __FILE__, 2 ).'/manna-configs/db_cfg/agent_config.php');
+
 $args = array();
 if(isset($_GET['regional_num'])){$args['regional_num']=  $_GET['regional_num'];}
 if(isset($link_record_num)){$args['link_record_num']=  $link_record_num;}
@@ -24,7 +27,9 @@ if(isset($lnk_num)){$args['lnk_num']=  $lnk_num;}
 $args['http_host']=   $_SERVER['HTTP_HOST'];
 
 $handle = curl_init();
-$url = "http://".$agent_url."/mannanetwork-dir/get_category_json.php";
+
+$url1 = $curl_security.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_category_json.php";
+
 // Set the url
 curl_setopt($handle, CURLOPT_URL, $url);
 curl_setopt($handle, CURLOPT_POSTFIELDS,$args);
@@ -47,6 +52,18 @@ foreach($comboList as $key=>$value){
 	$menu_str .= "<option value='y:" . $comboList[$key]['id'] .":".$comboList[$key]['name'] ."'>".$comboList[$key]['name']."</option>";
 	}
 	else
+	{
+	$menu_str .= "<option value='n:" . $comboList[$key]['id']  .":".$comboList[$key]['name'] . "'>".$comboList[$key]['name']."</option>";
+	}
+}
+
+$menu_str .= '</select><br>
+
+</form>';
+echo $menu_str;
+
+?>
+
 	{
 	$menu_str .= "<option value='n:" . $comboList[$key]['id']  .":".$comboList[$key]['name'] . "'>".$comboList[$key]['name']."</option>";
 	}
