@@ -63,16 +63,3 @@ $menu_str .= '</select><br>
 echo $menu_str;
 
 ?>
-
-	{
-	$menu_str .= "<option value='n:" . $comboList[$key]['id']  .":".$comboList[$key]['name'] . "'>".$comboList[$key]['name']."</option>";
-	}
-}
-
-$menu_str .= '</select><br>
-
-</form>';
-echo $menu_str;
-
-?>
-
