@@ -1,0 +1,4 @@
+Be sure to give write permission of this db_cfg folder and the files in it to the server (probably www-data).
+
+If the script doesn't finish successfully you probably need to remove the databases and users manually from mysql and retry the 
+script
