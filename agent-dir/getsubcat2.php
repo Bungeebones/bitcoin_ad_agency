@@ -1,4 +1,6 @@
 <?php
+//dev notes: I couldn't get curl to work with the dvelopment server's SSL so have to run it as http on dev server. The var below is used to switch out of that functionality if curl is working with SSL
+$curl_security = "http://";//Add an "s" to make curl use SSL
 
 $locus_array = "";
 $link_record_num = "";
@@ -10,7 +12,7 @@ $cat_page_num = "";
 $category_id = ""; 
 $lnk_num = "";
 
-include('agent_config.php');
+      include(dirname( __FILE__, 2 ).'/manna-configs/db_cfg/agent_config.php');
 $args = array();
 if(isset($locus_array)){$args['locus_array']=  $locus_array;}
 if(isset($link_record_num)){$args['link_record_num']=  $link_record_num;}
@@ -28,8 +30,7 @@ $args['http_host']=   $_SERVER['HTTP_HOST'];
 
 
 $handle = curl_init();
-$url = "http://".$agent_url."/mannanetwork-dir/get_category_json.php";
-
+$url = $curl_security."/".AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_category_json.php";
 // Set the url
 curl_setopt($handle, CURLOPT_URL, $url);
 curl_setopt($handle, CURLOPT_POSTFIELDS,$args);
@@ -76,4 +77,3 @@ $menu_str .= '</select><br>
 echo $menu_str;
 
 ?>
-
