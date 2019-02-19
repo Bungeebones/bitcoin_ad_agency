@@ -3,8 +3,7 @@
 include(dirname( __FILE__, 2 ). "/manna-configs/db_cfg/auth_constants.php");
 include(dirname( __FILE__, 2 ). "/manna-configs/db_cfg/".READER_AGENTS);
 include(dirname( __FILE__, 2 ). "/manna-configs/db_cfg/mysqli_connect.php");
-
-require('functions/functions.php');
+require(dirname( __FILE__, 1 ). "/functions/functions.php");
  
 if (array_key_exists("affiliate_num",$_POST))
   {
@@ -83,8 +82,9 @@ else
   {
   $regional_number  = "";
   }
-
+//echo '<br>$category_id = ', $category_id;
 if(isset($category_id) && $category_id > 0 && $category_id !=""){
+
 $catList = getCategoryChildren($category_id);
 echo json_encode($catList);
 }
