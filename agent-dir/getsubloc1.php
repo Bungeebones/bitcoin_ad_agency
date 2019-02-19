@@ -1,5 +1,10 @@
 <?php
 
+
+//dev notes: I couldn't get curl to work with the dvelopment server's SSL so have to run it as http on dev server. The var below is used to switch out of that functionality if curl is working with SSL
+$curl_security = "http://";//Add an "s" to make curl use SSL
+
+
 $regional_num = "";
 $link_record_num = "";
 $link_page_total = ""; 
@@ -10,7 +15,7 @@ $cat_page_num = "";
 $category_id = ""; 
 $lnk_num = "";
 
-include('agent_config.php');
+    include(dirname( __FILE__, 2 ).'/manna-configs/db_cfg/agent_config.php');
 $args = array();
 
 if(isset($_GET['regional_num'])){$args['regional_num']=  $_GET['regional_num'];}
@@ -25,7 +30,7 @@ if(isset($lnk_num)){$args['lnk_num']=  $lnk_num;}
 $args['http_host']=   $_SERVER['HTTP_HOST'];
 
 $handle = curl_init();
-$url = "http://".$agent_url."/mannanetwork-dir/get_regions_json.php";
+$url = $curl_security."/".AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_regions_json.php";
 // Set the url
 curl_setopt($handle, CURLOPT_URL, $url);
 curl_setopt($handle, CURLOPT_POSTFIELDS,$args);
@@ -47,6 +52,23 @@ $menu_str = '<form action="'. htmlspecialchars($_SERVER["PHP_SELF"], ENT_QUOTES,
 <option value="">'.WORDING_AJAX_REGIONAL_MENU1.'</option> ';
 foreach($regionList as $key=>$value){
  if($regionList[$key]['lft']+1 < $regionList[$key]['rgt']){
+	$menu_str .= "<option value='y:" . $regionList[$key]['id'] .":".$regionList[$key]['name'] ."'>".$regionList[$key]['name']."</option>";
+	}
+	else
+	{
+	$menu_str .= "<option value='n:" . $regionList[$key]['id']  .":".$regionList[$key]['name'] . "'>".$regionList[$key]['name']."</option>";
+	}
+}
+
+$menu_str .= '</select><br>
+
+</form>';
+echo $menu_str;
+
+?>
+
+
+
 	$menu_str .= "<option value='y:" . $regionList[$key]['id'] .":".$regionList[$key]['name'] ."'>".$regionList[$key]['name']."</option>";
 	}
 	else
