@@ -1,8 +1,5 @@
 <?php
 
-//dev notes: I couldn't get curl to work with the dvelopment server's SSL so have to run it as http on dev server. The var below is used to switch out of that functionality if curl is working with SSL
-$curl_security = "http://";//Add an "s" to make curl use SSL
-
 $locus_array = "";
 $link_record_num = "";
 $link_page_total = ""; 
@@ -31,7 +28,7 @@ $args['http_host']=   $_SERVER['HTTP_HOST'];
 
 
 $handle = curl_init();
-$url = $curl_security.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_category_json.php";
+$url = CURL_SECURITY.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_category_json.php";
 // Set the url
 curl_setopt($handle, CURLOPT_URL, $url);
 curl_setopt($handle, CURLOPT_POSTFIELDS,$args);
@@ -61,6 +58,53 @@ $args = array(
 $comboList = json_decode($jsonlinkList, true);
 $menu_str = '<form action="'. htmlspecialchars($_SERVER["PHP_SELF"], ENT_QUOTES, "utf-8").'"><select name="subCat4" onchange="updatecategoryButton(this.value), showSubCat4(this.value)">
 <option value="">'.WORDING_AJAX_MENU1.'</option> ';
+
+foreach($comboList as $key=>$value){
+
+ if($comboList[$key]['lft']+1 < $comboList[$key]['rgt']){
+	$menu_str .= "<option value='y:" . $comboList[$key]['id'] .":".$comboList[$key]['name'] ."'>".$comboList[$key]['name']."</option>";
+	}
+	else
+	{
+	$menu_str .= "<option value='n:" . $comboList[$key]['id']  .":".$comboList[$key]['name'] . "'>".$comboList[$key]['name']."</option>";
+	}
+}
+
+$menu_str .= '</select><br>
+</form>';
+echo $menu_str;
+
+?>
+
+'pagem_url_cat' => $pagem_url_cat,
+'link_page_num' => $link_page_num, 
+'cat_page_num' => $cat_page_num, 
+'category_id' => $q, 
+'lnk_num' => $lnk_num,
+'http_host' =>   $_SERVER['HTTP_HOST']
+);
+
+
+$comboList = json_decode($jsonlinkList, true);
+$menu_str = '<form action="'. htmlspecialchars($_SERVER["PHP_SELF"], ENT_QUOTES, "utf-8").'"><select name="subCat4" onchange="updatecategoryButton(this.value), showSubCat4(this.value)">
+<option value="">'.WORDING_AJAX_MENU1.'</option> ';
+
+foreach($comboList as $key=>$value){
+
+ if($comboList[$key]['lft']+1 < $comboList[$key]['rgt']){
+	$menu_str .= "<option value='y:" . $comboList[$key]['id'] .":".$comboList[$key]['name'] ."'>".$comboList[$key]['name']."</option>";
+	}
+	else
+	{
+	$menu_str .= "<option value='n:" . $comboList[$key]['id']  .":".$comboList[$key]['name'] . "'>".$comboList[$key]['name']."</option>";
+	}
+}
+
+$menu_str .= '</select><br>
+</form>';
+echo $menu_str;
+
+?>
 
 foreach($comboList as $key=>$value){
 
