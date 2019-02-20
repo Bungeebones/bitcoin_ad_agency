@@ -1,10 +1,7 @@
 <?php
 //NOTE: the next AGENT_FOLDERNAME setting can be adjusted according to your folder naming preference. Just be sure that you match the name changes you make here to  those you make renaming the bitcoin_ad_agency folder 
 if (!defined('AGENT_FOLDERNAME')) {
-define("AGENT_FOLDERNAME", "bitcoin_ad_agency/manna-network");
-}
-if (!defined('AGENT_NETWORK_FOLDERNAME')) {
-define("AGENT_NETWORK_FOLDERNAME", "bitcoin_ad_agency/manna-network");
+define("AGENT_FOLDERNAME", "bitcoin_ad_agency");
 }
 if (!defined('AGENT_URL')) {
 define("AGENT_URL", "https://insert your site's domain name here");//be SURE to include the http:// or https:// 
