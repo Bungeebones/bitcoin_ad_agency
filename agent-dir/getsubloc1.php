@@ -1,10 +1,5 @@
 <?php
 
-
-//dev notes: I couldn't get curl to work with the dvelopment server's SSL so have to run it as http on dev server. The var below is used to switch out of that functionality if curl is working with SSL
-$curl_security = "http://";//Add an "s" to make curl use SSL
-
-
 $regional_num = "";
 $link_record_num = "";
 $link_page_total = ""; 
@@ -30,7 +25,7 @@ if(isset($lnk_num)){$args['lnk_num']=  $lnk_num;}
 $args['http_host']=   $_SERVER['HTTP_HOST'];
 
 $handle = curl_init();
-$url = $curl_security.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_regions_json.php";
+$url = CURL_SECURITY.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_regions_json.php";
 // Set the url
 curl_setopt($handle, CURLOPT_URL, $url);
 curl_setopt($handle, CURLOPT_POSTFIELDS,$args);
@@ -47,6 +42,25 @@ require_once('translations/en.php');
 $regionList = json_decode($jsonregionList, true);
 
 $menu_str = '<form action="'. htmlspecialchars($_SERVER["PHP_SELF"], ENT_QUOTES, "utf-8").'">
+<select name="subLoc1" onchange="updateregionalButton(this.value), showSubLoc2(this.value)">
+
+<option value="">'.WORDING_AJAX_REGIONAL_MENU1.'</option> ';
+foreach($regionList as $key=>$value){
+ if($regionList[$key]['lft']+1 < $regionList[$key]['rgt']){
+	$menu_str .= "<option value='y:" . $regionList[$key]['id'] .":".$regionList[$key]['name'] ."'>".$regionList[$key]['name']."</option>";
+	}
+	else
+	{
+	$menu_str .= "<option value='n:" . $regionList[$key]['id']  .":".$regionList[$key]['name'] . "'>".$regionList[$key]['name']."</option>";
+	}
+}
+
+$menu_str .= '</select><br>
+
+</form>';
+echo $menu_str;
+
+?>
 <select name="subLoc1" onchange="updateregionalButton(this.value), showSubLoc2(this.value)">
 
 <option value="">'.WORDING_AJAX_REGIONAL_MENU1.'</option> ';
