@@ -1,5 +1,5 @@
 <?php
-//NOTE: the next AGENT_FOLDERNAME setting can be adjusted according to your folder naming preference. Just be sure that you match the name changes you make here to  those you make renaming the bitcoin_ad_agency folder 
+//NOTE: the flollowing default AGENT_FOLDERNAME setting can be adjusted according to your folder naming preference. Just be sure that you match the name changes you make here to  those you make renaming the actual bitcoin_ad_agency folder. You can also place the script deeper in the file structure by adding the additional folders here - example define("AGENT_FOLDERNAME", "new_folder_name/bitcoin_ad_agency");
 if (!defined('AGENT_FOLDERNAME')) {
 define("AGENT_FOLDERNAME", "bitcoin_ad_agency");
 }
