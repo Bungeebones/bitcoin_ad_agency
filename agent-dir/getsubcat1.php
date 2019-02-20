@@ -1,7 +1,4 @@
 <?php
-//dev notes: I couldn't get curl to work with the dvelopment server's SSL so have to run it as http on dev server. The var below is used to switch out of that functionality if curl is working with SSL
-$curl_security = "http://";//Add an "s" to make curl use SSL
-
 $locus_array = "";
 $link_record_num = "";
 $link_page_total = ""; 
@@ -28,7 +25,7 @@ $args['http_host']=   $_SERVER['HTTP_HOST'];
 
 $handle = curl_init();
 
-$url = $curl_security.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_category_json.php";
+$url = CURL_SECURITY.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_category_json.php";
 
 // Set the url
 curl_setopt($handle, CURLOPT_URL, $url);
