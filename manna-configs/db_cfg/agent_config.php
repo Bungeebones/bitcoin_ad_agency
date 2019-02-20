@@ -4,7 +4,7 @@ if (!defined('AGENT_FOLDERNAME')) {
 define("AGENT_FOLDERNAME", "bitcoin_ad_agency");
 }
 if (!defined('AGENT_URL')) {
-define("AGENT_URL", "https://insert your site's domain name here");//be SURE to NOT include the http:// nor an https:// 
+define("AGENT_URL", "insert your site's domain name here");//be SURE to NOT include the http:// nor an https:// 
 }
 
 //IMPORTANT - YOU MUST REGISTER AT THE MANNA NETWORK ADMINISTRATION TO GET A VALID AGENT ID! IMPROPER CONFIGURATION CAN RESULT IN LOSS OF YOUR AND YOUR DOWNLINE'S COMMISSIONS AND ENLISTMENT CREDITS! 
