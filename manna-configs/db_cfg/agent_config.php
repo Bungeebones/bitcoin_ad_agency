@@ -6,7 +6,9 @@ define("AGENT_FOLDERNAME", "bitcoin_ad_agency");
 if (!defined('AGENT_URL')) {
 define("AGENT_URL", "insert your site's domain name here");//be SURE to NOT include the http:// nor an https:// 
 }
-
+if (!defined('CURL_SECURITY')) {
+define("CURL_SECURITY", "http://");//had an issue in the development server where curl would not work using the dev server's SSL setup. We have a constant for all url requests to set it either https or http 
+}
 //IMPORTANT - YOU MUST REGISTER AT THE MANNA NETWORK ADMINISTRATION TO GET A VALID AGENT ID! IMPROPER CONFIGURATION CAN RESULT IN LOSS OF YOUR AND YOUR DOWNLINE'S COMMISSIONS AND ENLISTMENT CREDITS! 
 if (!defined('AGENT_ID')) {
 define("AGENT_ID", "insert your agent ID number here");//get it from https://manna-network.cash/agents/register.php
