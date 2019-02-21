@@ -1,6 +1,4 @@
 <?php 
-//dev notes: I couldn't get curl to work with the dvelopment server's SSL so have to run it as http on dev server. The var below is used to switch out of that functionality if curl is working with SSL
-$curl_security = "http://";//Add an "s" to make curl use SSL
 include('includes/bootstrap_header.php');
 include('translations/en.php');
 include(dirname( __DIR__, 1 ).'/agent-dir/js/registration.js');
@@ -10,20 +8,6 @@ include(dirname( __DIR__, 1 ).'/agent-dir/translations/en.js');
 //change the above text "change_me" to your lnk_number. You should have gotten an email containing it. If you lost it you can retrieve it by logging in at BungeeBones.com/members 
 
 include(dirname( __DIR__, 1 ).'/manna-configs/db_cfg/agent_config.php');
-//get the proper folder/location 
-//if they cloned it would be bitcoin_ad_agency (or what they renamed it to)
-//if they unzipped in the root, we can go to each directory (I think?)
-$pos = strpos(AGENT_FOLDERNAME, '/');
-if($pos >0){
-$pieces=explode("/",AGENT_FOLDERNAME);
-$lead_folder = $pieces[0]; 
-}
-else
-{
-$lead_folder = AGENT_FOLDERNAME;
-}
-
-$insecure_url = str_replace("https://", "http://", AGENT_URL);
 
 $category_id = '';
 $cat_page_num = '';
@@ -100,24 +84,20 @@ if(ISSET($category_id) && $category_id !="") {
 	$regional_num = $_POST['regional_num'] ;
 	}
 
-$args = array('regional_num' => $regional_num, 'link_record_num' => $link_record_num, 'link_page_total' => $link_page_total, 'link_page_id' => $link_page_id, 'pagem_url_cat' => $pagem_url_cat, 'link_page_num' => $link_page_num, 'cat_page_num' => $cat_page_num, 'category_id' => $category_id, 'lnk_num' => $lnk_num, 'http_host' =>   $_SERVER['HTTP_HOST']
-);
-$handle = curl_init();
 
-$url1 = $curl_security.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_category_json.php";
+require(dirname( __FILE__, 2 ). "/mannanetwork-dir/functions/functions.php");
 
-// Set the url
-curl_setopt($handle, CURLOPT_URL, $url1);
-curl_setopt($handle, CURLOPT_POSTFIELDS,$args);
- curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, false);
-// Set the result output to be a string.
-curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
- $jsoncatList = curl_exec($handle);
- curl_close($handle);
+if(isset($category_id) && $category_id > 0 && $category_id !=""){
+$categoryList = getCategoryChildren($category_id);
+}
+else
+{
+echo "NO MORE SUB CATEGORIES";
+}
            echo '<div class="table-responsive">
             <table class="table table-striped table-sm">
              <tbody><tr rowspan="2"> <td><h2>Select Category</h2>';
-$categoryList = json_decode($jsoncatList, true);
+
 $menu_str = '<form action="'. htmlspecialchars($_SERVER["PHP_SELF"], ENT_QUOTES, "utf-8").'"><select name="category_id" onchange="updatecategoryButton(this.value,\'0:0:0\'), showSubCat1(this.value)"><option value="">'.WORDING_AJAX_MENU1.'</option> ';
 	foreach($categoryList as $key=>$value){
 		if($categoryList[$key]['lft']+1 < $categoryList[$key]['rgt']){
@@ -157,14 +137,14 @@ echo $menu_str;
 // NOW CHECK AND BUILD REGIONAL FILTER MENU
 ////????????????????????????????????????????????????????????????????????????????????????????????????????????????????????///////////////////////////
 //note let's try to merge this args with the one above but this one we are trying using a single regional num instead of locus array?
-
+/*
 $args2 = array('regional_num' => $regional_num,'link_record_num' => $link_record_num,'link_page_total' => $link_page_total, 'link_page_id' => $link_page_id,
 'pagem_url_cat' => $pagem_url_cat,'link_page_num' => $link_page_num, 'cat_page_num' => $cat_page_num, 'category_id' => $category_id, 'lnk_num' => $lnk_num,'http_host' =>   $_SERVER['HTTP_HOST']
 );
 $handle = curl_init();
 
-
-$url1 = $curl_security.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_regions_json.php";
+$url1 = $insecure_url."/".$lead_folder."/mannanetwork-dir/get_category_json.php";
+//$url1 = AGENT_URL."/".$lead_folder."/mannanetwork-dir/get_regions_json.php";
 
 // Set the url
 curl_setopt($handle, CURLOPT_URL, $url1);
@@ -174,10 +154,11 @@ curl_setopt($handle, CURLOPT_POSTFIELDS,$args2); //use same args as other querie
 curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
  $jsonregionList = curl_exec($handle);
  curl_close($handle);
+*/
 
 //echo '<h2>Select Regional Filters?</h2>';
 echo '<BR><BR>'.WORDING_REGIONAL_FILTERS_LABEL;
-$regionList = json_decode($jsonregionList, true);
+//$regionList = json_decode($jsonregionList, true);
 $menu_str = '<form action="'. htmlspecialchars($_SERVER["PHP_SELF"], ENT_QUOTES, "utf-8").'"><select name="regional_num" onchange="updateregionalButton(this.value), showSubLoc1(this.value)"><option value="">'.WORDING_AJAX_REGIONAL_MENU1.'</option> ';
 $menu_str .= "
 <option value='y:2566:Africa'>Africa</option>
@@ -209,13 +190,13 @@ echo $menu_str;
 	unset($_POST['regional_num']);
 	}
 // NOW USE THE ABOVE TWO CRITERIA CHECK, RETRIEVE AND DISPLAY LINKS
-
+/*
 $args2 = array('regional_num' => $regional_num,'link_record_num' => $link_record_num,'link_page_total' => $link_page_total,'link_page_id' => $link_page_id,'pagem_url_cat' => $pagem_url_cat,
 'link_page_num' => $link_page_num, 'cat_page_num' => $cat_page_num, 'category_id' => $category_id, 'lnk_num' => $lnk_num,'http_host' =>   $_SERVER['HTTP_HOST']);
 
 $handle = curl_init();
-//$url2 = $insecure_url."/".$lead_folder."/mannanetwork-dir/get_links_json.php";
-$url2 = $curl_security.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_links_json.php";
+$url2 = $insecure_url."/".$lead_folder."/mannanetwork-dir/get_links_json.php";
+
 curl_setopt($handle, CURLOPT_URL, $url2);
 curl_setopt($handle, CURLOPT_POSTFIELDS,$args2);
  curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, false);
@@ -249,7 +230,14 @@ $url2 = AGENT_URL."/".$lead_folder."/mannanetwork-dir/get_links_json.php";
 $result = file_get_contents($url2, false, $context);
 $linksList2 = json_decode($result, true);
 */
-
+if(isset($category_id) && $category_id > 0 && $category_id !=""){
+$linksList2 = getLinks($category_id);
+}
+else
+{
+echo "NO MORE SUB CATEGORIES";
+}
+  
 	if(sizeof($linksList2) > 20){
 			//we need to run the paginator
 		$number_of_pages =ceil(sizeof($linksList2)/20);
