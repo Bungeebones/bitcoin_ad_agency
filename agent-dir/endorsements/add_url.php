@@ -8,12 +8,14 @@
 </div>     
 <?php
 $server_url=$_SERVER['HTTP_HOST'];
+$url1 = CURL_SECURITY.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_category_json.php";	
+echo $url1;
 ?>
    <div class="modalFooter">
                      <div class="acc-section">
 				<div style="text-align: center;">
-$url1 = $curl_security.AGENT_URL."/".AGENT_FOLDERNAME."/mannanetwork-dir/get_category_json.php";				
-<iframe src="<?php echo 'https://'.AGENT_URL."/". AGENT_FOLDERNAME;?>/manna-network/members/register.php?referer_lnk_num=<?php echo $_GET['lnk_num'];?>&remote_server=<?php echo $server_url;?>" width="100%" height="750"]
+			
+<iframe src="<?php echo CURL_SECURITY.AGENT_URL."/". AGENT_FOLDERNAME;?>/manna-network/members/register.php?referer_lnk_num=<?php echo $_GET['lnk_num'];?>&remote_server=<?php echo $server_url;?>" width="100%" height="750"]
 		</iframe>				
 </div> 
 
