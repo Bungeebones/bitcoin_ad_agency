@@ -1,0 +1,106 @@
+CREATE TABLE `categories_regional2` (
+  `id` int(21) NOT NULL,
+  `name` varchar(36)DEFAULT NULL,
+  `parent` int(21) DEFAULT '1',
+  `lft` int(10) NOT NULL DEFAULT '0',
+  `rgt` int(10) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`),
+  KEY `id_2` (`id`),
+INDEX `parent` (`parent`),
+INDEX `lft` (`lft`),
+INDEX `rgt` (`rgt`)
+)  ENGINE=InnoDB AUTO_INCREMENT=11287 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='categories regional2 data';
+
+CREATE TABLE `categories` (
+  `id` int(21) NOT NULL AUTO_INCREMENT,
+  `name` varchar(32)  NOT NULL DEFAULT '',
+  `parent` int(21) DEFAULT '1',
+  `lft` int(10) NOT NULL DEFAULT '0',
+  `rgt` int(10) NOT NULL DEFAULT '0',
+`link_count` int(10) DEFAULT '0',
+   PRIMARY KEY (`id`),
+  KEY `id` (`id`),
+  KEY `id_2` (`id`),
+INDEX `parent` (`parent`),
+INDEX `lft` (`lft`),
+INDEX `rgt` (`rgt`)
+)  ENGINE=InnoDB AUTO_INCREMENT=11287 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='categories data';
+
+CREATE TABLE `links` (
+  `id` int(21) NOT NULL AUTO_INCREMENT,
+  `customer_id` int(12) DEFAULT NULL,
+  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `name` varchar(76) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `start_date` int(20) NOT NULL DEFAULT '0',
+  `nofollow` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'on',
+  `location_id` int(11) DEFAULT NULL,
+  `category` int(11) DEFAULT NULL,
+  `website_street` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `website_district` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+ `price_slot`         int(11)   NOT NULL DEFAULT '0',
+`coin_type` varchar(3) COLLATE utf8mb4_unicode_ci DEFAULT NULL,   
+  UNIQUE KEY `id_2` (`id`),
+  KEY `id` (`id`),
+  KEY `id_3` (`id`),
+INDEX `location_id` (`location_id`),
+INDEX `category` (`category`),
+INDEX `price_slot` (`price_slot`)
+) ENGINE=InnoDB AUTO_INCREMENT=8087 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='customer data';
+
+CREATE TABLE  `pegged_for_deletion` (
+  `id` int(11) NOT NULL,
+  `link_id` int(8) NOT NULL,
+  `non_detectable` int(1) NOT NULL DEFAULT '0',
+  `url` varchar(80) NOT NULL,
+  `pegged_date` date NOT NULL,
+ UNIQUE KEY `id_2` (`id`),
+  KEY `id` (`id`),
+  INDEX `link_id` (`link_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ;
+
+CREATE TABLE IF NOT EXISTS `promo_codes` (
+`id` int(12) NOT NULL,
+`t_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+`promo_title`                  varchar(25)           NULL,                   
+ `promo_description`            varchar(225)          NULL,                   
+ `coin_type`                    varchar(60)           NULL,                   
+ `promo_amount`                 decimal(20,10) unsigned zerofill NOT NULL
+) 
+
+ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='promo_codes';
+
+CREATE TABLE `recruiters_tree` (
+  `id` int(21) NOT NULL AUTO_INCREMENT,
+ `url` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link_id` int(6) NOT NULL DEFAULT '0',
+  `wp_domain` varchar(40) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_parked` tinyint(1) DEFAULT '0',
+  `parent` int(10) DEFAULT '0',
+  `lft` int(10) NOT NULL DEFAULT '0',
+  `rgt` int(10) NOT NULL DEFAULT '0',
+  `time_period` tinyint(1) NOT NULL DEFAULT '8',
+  `start_clone_date` int(10) DEFAULT NULL,
+  `last_update` int(20) NOT NULL,
+  `end_clone_date` datetime NOT NULL,
+   `display_freebies` varchar(16) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  UNIQUE KEY `id_2` (`id`),
+  KEY `id` (`id`),
+  INDEX `link_id` (`link_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ;
+
+CREATE TABLE `regional_sign_ups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `continent` int(6) NOT NULL DEFAULT '0',
+  `country` int(6) NOT NULL DEFAULT '0',
+  `state` int(6) NOT NULL DEFAULT '0',
+  `district1` int(6) NOT NULL DEFAULT '0',
+  `city` int(6) NOT NULL DEFAULT '0',
+  `district2` int(6) NOT NULL DEFAULT '0',
+  `street` varchar(150) DEFAULT '0',
+  `link_id` int(11) NOT NULL DEFAULT '0',
+  `cat_id` int(10) NOT NULL DEFAULT '0',
+`agent_ID` int(10) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+)  ENGINE=InnoDB AUTO_INCREMENT=11287 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='customer data';
