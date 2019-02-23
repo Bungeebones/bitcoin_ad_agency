@@ -1,0 +1,145 @@
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incrementing user_id of each user, unique index',
+  `user_name` varchar(60) NOT NULL COMMENT 'user''s name, unique',
+  `user_password_hash` varchar(255)  DEFAULT NULL COMMENT 'user''s password in salted and hashed format',
+  `user_email` varchar(64)  NOT NULL COMMENT 'user''s email, unique',
+  `user_active` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'user''s activation status',
+  `user_account_type` tinyint(1) DEFAULT NULL,
+  `user_has_avatar` tinyint(1) DEFAULT NULL,
+  `user_rememberme_token` varchar(64)  DEFAULT NULL COMMENT 'user''s remember-me cookie token',
+  `user_creation_timestamp` bigint(20) DEFAULT NULL COMMENT 'timestamp of the creation of user''s account',
+  `user_last_login_timestamp` bigint(20) DEFAULT NULL COMMENT 'timestamp of user''s last login',
+  `user_failed_logins` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'user''s failed login attempts',
+  `user_last_failed_login` int(10) DEFAULT NULL COMMENT 'unix timestamp of last failed login attempt',
+  `user_activation_hash` varchar(40)  DEFAULT NULL COMMENT 'user''s email verification hash string',
+  `user_password_reset_hash` char(40)  DEFAULT NULL COMMENT 'user''s password reset code',
+  `user_password_reset_timestamp` bigint(20) DEFAULT NULL COMMENT 'timestamp of the password reset request',
+  `recruiter_lnk_num` int(12) DEFAULT NULL,
+  `agents_ID` int(12) DEFAULT NULL,
+  `access_level` int(1) DEFAULT NULL,
+  `user_registration_datetime` varchar(25)  DEFAULT NULL,
+  `user_registration_ip` varchar(20)  DEFAULT NULL,
+  `user_registration_proxy_ip` varchar(25) DEFAULT NULL,
+`website_title`  varchar(25) DEFAULT NULL,
+`website_description`  varchar(225) DEFAULT NULL,
+`website_url`  varchar(60) DEFAULT NULL,
+`category_id`  int(12) DEFAULT NULL,
+`newcatsuggestion` varchar(60) DEFAULT NULL,
+`location_id` int(12) DEFAULT NULL,
+`website_street` varchar(80) DEFAULT NULL,
+`website_district` varchar(60)  DEFAULT NULL,
+`wants_tobea_widget` int(12) DEFAULT NULL,
+
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `user_name` (`user_name`),
+  UNIQUE KEY `user_email` (`user_email`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='user data';
+
+CREATE TABLE `regional_sign_ups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `continent` int(6) NOT NULL DEFAULT '0',
+  `country` int(6) NOT NULL DEFAULT '0',
+  `state` int(6) NOT NULL DEFAULT '0',
+  `district1` int(6) NOT NULL DEFAULT '0',
+  `city` int(6) NOT NULL DEFAULT '0',
+  `district2` int(6) NOT NULL DEFAULT '0',
+  `street` varchar(150) DEFAULT '0',
+  `link_id` int(11) NOT NULL DEFAULT '0',
+  `cat_id` int(10) NOT NULL DEFAULT '0',
+`agent_ID` int(10) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+)  ENGINE=InnoDB AUTO_INCREMENT=11287 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='customer data';
+
+CREATE TABLE `price_slots_subscripts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(8) NOT NULL DEFAULT '0',
+  `link_id` int(8) NOT NULL,
+  `price_slot_amnt` decimal(20,10) unsigned zerofill NOT NULL,
+  `coin_type` varchar(8) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cat_id` int(5) NOT NULL DEFAULT '0',
+  `t_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `start_date` varchar(19) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `agent_ID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='customer data';
+
+CREATE TABLE `price_slots_daily_ledger` (
+  `id` int(20) NOT NULL,
+  `user_id` int(8) NOT NULL DEFAULT '0',
+  `link_id` int(9) NOT NULL,
+  `balance` decimal(20,10) NOT NULL DEFAULT '0.0000000000',
+  `tn_balance` decimal(20,10) NOT NULL DEFAULT '0.0000000000',
+  `trans_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `trans_type` varchar(7) DEFAULT NULL,
+  `deposit` decimal(20,10) NOT NULL DEFAULT '0.0000000000',
+  `deposit_id` varchar(18) NOT NULL DEFAULT '0',
+  `purchase` decimal(20,10) NOT NULL DEFAULT '0.0000000000',
+  `purchase_id` varchar(18) NOT NULL DEFAULT '0',
+ PRIMARY KEY (`id`),
+  KEY `id` (`id`),
+  KEY `id_2` (`id`),
+INDEX `user_id` (`user_id`),
+INDEX `link_id` (`link_id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='price slots daily ledger';
+
+CREATE TABLE IF NOT EXISTS `customers` (
+  `customer_id` int(12) NOT NULL AUTO_INCREMENT,
+ `remote_customer_id` int(12) NOT NULL,
+ `agent_id` int(12) NOT NULL ,
+PRIMARY KEY (customer_id) ,
+  KEY (customer_id)   
+)
+ ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ;
+
+CREATE TABLE IF NOT EXISTS `promo_codes` (
+`id` int(12) NOT NULL AUTO_INCREMENT,
+`t_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+`promo_title`                  varchar(25)           NULL,                   
+ `promo_description`            varchar(225)          NULL,                   
+ `coin_type`                    varchar(60)           NULL,                   
+ `promo_amount`                 decimal(20,10) unsigned zerofill NOT NULL,
+  PRIMARY KEY (`id`)
+) 
+
+ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ;
+
+CREATE TABLE IF NOT EXISTS `customer_links` (
+`id` int(12)  NOT NULL AUTO_INCREMENT,
+`user_id`                  int(14)                    NULL,
+`recruiter_lnk_num`              int(14)                   NULL,
+`website_title`                  varchar(25)           NULL,                   
+ `website_description`            varchar(225)          NULL,                   
+ `website_url`                    varchar(60)           NULL,                   
+ `category_id`                    int(12)               NULL,                   
+ `newcatsuggestion`               varchar(60)           NULL,                   
+ `location_id`                    int(12)               NULL,                   
+ `website_street`                 varchar(80)           NULL,                   
+ `website_district`               varchar(60)           NULL,
+`customer_id`                  int(14)                    NULL,
+`user_registration_datetime`  varchar(44)                NULL,
+`wants_tobea_widget`        int DEFAULT 0,
+PRIMARY KEY (id) ,
+  KEY (id)   
+
+) 
+
+ ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ;
+
+CREATE TABLE `connection_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `t_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  
+  `updated_table_list` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='customer data';
+
+CREATE TABLE `balance` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `customer_id` int(11) NOT NULL,
+  `t_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `amount_DMC` decimal(20,10) unsigned zerofill NOT NULL,
+  `amount_BCH` decimal(20,10) unsigned zerofill NOT NULL,
+  `txid` varchar(65) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ;
